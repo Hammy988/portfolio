@@ -31,13 +31,13 @@
     html { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
     header > .mx-auto, main, footer { max-width: 1024px; margin-inline:auto; }
 
-    /* Brand block */
+    /* Brand block (screen) */
     .brand-wrap { display:flex; align-items:center; gap:.75rem; }
     .brand-logo { width:44px; height:44px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg,#2563EB,#059669); color:#fff; font-weight:800; }
     .brand-name { font-weight:800; line-height:1.1; }
     .brand-title { font-size:.9rem; color:#4b5563; }
 
-    /* Square icon buttons */
+    /* Square icon buttons (screen) */
     .icon-btn {
       width:40px; height:40px; border-radius:.6rem; display:inline-grid; place-items:center;
       background:#eef2ff; color:#1e40af; border:1px solid #dbeafe; box-shadow:0 1px 1px rgba(0,0,0,.03);
@@ -46,41 +46,87 @@
     .icon-btn:hover { background:#e0e7ff; }
     .icon-btn:active { transform:scale(0.97); }
     .icon { width:18px; height:18px; }
-
-    /* Linked icon-only button */
     .brand-linkedin {
       width:40px; height:40px; border-radius:.6rem; display:inline-grid; place-items:center;
       background:#0A66C2; color:#fff; transition:filter .15s ease;
     }
     .brand-linkedin:hover { filter:brightness(.95); }
-    .no-print-url { /* used to suppress URL in print */ }
 
-    /* PRINT: show ATS only */
+    /* PRINT: ATS resume (color-accented, single column) */
     @media print {
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       html, body { background: #ffffff !important; }
       .screen-only { display: none !important; }
       .print-only { display: block !important; }
-      /* Do NOT append URLs for elements tagged .no-print-url */
-      a.no-print-url::after { content: "" !important; }
-      /* If you want URLs appended for normal links, uncomment:
-      a[href^="http"]::after { content:" (" attr(href) ")"; color:#6b7280; font-weight:400; }
-      */
-      @page { margin: 12mm; }
+
+      :root {
+        --brand:#1E3A8A;   /* brand-800 */
+        --brand-soft:#DBEAFE; /* brand-100 */
+        --accent:#065F46;  /* accent-800 */
+      }
+
+      body { font-size: 12.5px; line-height: 1.35; color:#111827; }
+      #ats { max-width: 210mm; margin: 0 auto; }
+
+      .ats-header {
+        border-bottom: 2px solid var(--brand);
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+      }
+      .ats-name { font-size: 24px; font-weight: 800; color: var(--brand); margin:0; }
+      .ats-meta { margin-top: 4px; color:#1f2937; display:flex; flex-wrap:wrap; gap:8px; }
+      .meta-chip {
+        background: var(--brand-soft);
+        color: var(--brand);
+        padding: 3px 8px;
+        border-radius: 999px;
+        font-weight: 600;
+        border: 1px solid #bfdbfe;
+      }
+
+      .ats-section { margin-top: 12px; }
+      .ats-title {
+        font-size: 15px; font-weight: 800; color: var(--brand);
+        border-bottom: 1px solid #c7d2fe; padding-bottom: 4px; margin: 0 0 6px;
+      }
+
+      .ats-role { margin-top: 6px; break-inside: avoid; }
+      .ats-role h3 { font-size: 13.5px; font-weight: 800; color:#111827; margin:0; }
+      .ats-role .company { font-size: 12.5px; color:#1f2937; margin-top:2px; }
+      .ats-role .location { color:#374151; }
+      .ats-role ul { margin: 6px 0 0 18px; }
+      .ats-role li { margin: 3px 0; }
+
+      .ats-badges { display:flex; gap:6px; flex-wrap:wrap; margin-top: 6px; }
+      .badge {
+        border:1px solid #cbd5e1; background:#f8fafc; color:#0f172a;
+        padding:2px 8px; border-radius:999px; font-weight:700; font-size:12px;
+      }
+      .badge-positive { border-color:#86efac; background:#ecfdf5; color:#065f46; }
+      .badge-info     { border-color:#93c5fd; background:#eff6ff; color:#1e3a8a; }
+
+      .ats-list { margin: 6px 0 0 18px; }
+      .ats-list li { margin: 3px 0; }
+
+      .ats-soft { color:#1f2937; }
+      .ats-kicker { font-weight:700; color:var(--brand); }
+
+      .pb-avoid { break-inside: avoid; page-break-inside: avoid; }
+      .pb-always { page-break-before: always; }
+      @page { margin: 10mm; }
     }
-    .print-only { display: none; }
+
+    .print-only { display:none; } /* hide ATS on screen */
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-  <!-- ===== SCREEN PORTFOLIO (hidden on print) ===== -->
+  <!-- ========== SCREEN PORTFOLIO (unchanged) ========== -->
   <div class="screen-only">
-    <!-- Background -->
     <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
     <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
-        style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
+         style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
 
-    <!-- Header -->
     <header id="topnav" class="sticky top-0 z-50 bg-blue-50/90 backdrop-blur-md border-b border-blue-200">
       <div class="mx-auto px-5">
         <div class="flex items-center justify-between py-3">
@@ -106,24 +152,21 @@
             <!-- LinkedIn icon-only -->
             <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener"
                class="brand-linkedin no-print-url" aria-label="LinkedIn" title="LinkedIn">
-              <!-- LinkedIn SVG -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
                 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.45 0 53.8 0 24.1 24.09-.5 53.79-.5c29.66 0 53.75 24.6 53.75 54.3 0 29.65-24.09 53.8-53.75 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.26-79.2-48.26 0-55.66 37.7-55.66 76.6V448h-92.4V148.9h88.7v40.8h1.3c12.36-23.4 42.54-48.26 87.5-48.26 93.5 0 110.7 61.5 110.7 141.3V448z"/>
               </svg>
             </a>
 
-            <!-- Copy link (square) -->
+            <!-- Copy link -->
             <button id="copyLink" class="icon-btn" aria-label="Copy site link" title="Copy link">
-              <!-- Link icon -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path d="M10 14a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5" stroke-width="1.8"/>
                 <path d="M14 10a5 5 0 0 0-7.07 0L4.1 12.83a5 5 0 1 0 7.07 7.07L13 19" stroke-width="1.8"/>
               </svg>
             </button>
 
-            <!-- Print to PDF (square) -->
+            <!-- Print to PDF -->
             <button id="printBtn" class="icon-btn" aria-label="Print to PDF" title="Print to PDF">
-              <!-- Printer icon -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path d="M6 9V2h12v7" stroke-width="1.8"/>
                 <rect x="6" y="13" width="12" height="8" rx="1.5" stroke-width="1.8"/>
@@ -136,7 +179,6 @@
           </div>
         </div>
 
-        <!-- Mobile menu -->
         <div id="mobileMenu" class="md:hidden hidden pb-3">
           <div class="grid gap-1">
             <a href="#about" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">About</a>
@@ -151,9 +193,8 @@
       </div>
     </header>
 
-    <!-- Main -->
+    <!-- Main (screen) -->
     <main class="mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- About -->
       <section id="about" class="pt-10">
         <div class="max-w-5xl">
           <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">
@@ -168,7 +209,6 @@
         </div>
       </section>
 
-      <!-- Skills -->
       <section id="skills" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Core Skills</h2>
         <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -199,7 +239,6 @@
         </div>
       </section>
 
-      <!-- Experience -->
       <section id="experience" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Experience</h2>
 
@@ -241,7 +280,6 @@
         </article>
       </section>
 
-      <!-- Education -->
       <section id="education" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Education</h2>
         <div class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
@@ -257,7 +295,6 @@
         </div>
       </section>
 
-      <!-- Certifications -->
       <section id="certifications" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Certifications & Awards</h2>
         <div class="grid gap-5 md:grid-cols-2">
@@ -280,7 +317,6 @@
         </div>
       </section>
 
-      <!-- Projects -->
       <section id="projects" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Projects</h2>
         <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
@@ -295,7 +331,6 @@
         </article>
       </section>
 
-      <!-- Contact -->
       <section id="contact" class="mt-10 mb-14">
         <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-2xl p-1">
           <div class="bg-blue-50/80 rounded-2xl p-6 sm:p-8">
@@ -308,7 +343,6 @@
                 </svg>
               </a>
               <button id="copyEmail" class="icon-btn" aria-label="Copy email" title="Copy email">
-                <!-- Clipboard icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <rect x="9" y="2" width="6" height="4" rx="1" stroke-width="1.8"></rect>
                   <rect x="4" y="6" width="16" height="16" rx="2" stroke-width="1.8"></rect>
@@ -320,7 +354,6 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="mx-auto px-4 sm:px-6 lg:px-8 pb-10 text-gray-600">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
         <p>© <span id="year"></span> Mohammed Al Subaie. All rights reserved.</p>
@@ -329,98 +362,109 @@
     </footer>
   </div>
 
-  <!-- ===== PRINT-ONLY ATS RESUME ===== -->
-  <div id="resume-ats" class="print-only">
-    <main>
-      <section>
-        <h1 style="font-size:24px; font-weight:800; margin:0;">Mohammed Al Subaie</h1>
-        <div style="font-size:14px; margin-top:4px;">
-          Al Khobar, Saudi Arabia · Email: mo.subaie@gmail.com · LinkedIn: linkedin.com/in/mohammed-al-subaie-28159089
-        </div>
-      </section>
+  <!-- ========== PRINT-ONLY ATS RESUME (full, colorful, single-column) ========== -->
+  <div id="ats" class="print-only">
+    <section class="ats-header pb-avoid">
+      <h1 class="ats-name">Mohammed Al Subaie</h1>
+      <div class="ats-meta">
+        <span class="meta-chip">Al Khobar, Saudi Arabia</span>
+        <span class="meta-chip">Email: mo.subaie@gmail.com</span>
+        <span class="meta-chip">LinkedIn: linkedin.com/in/mohammed-al-subaie-28159089</span>
+      </div>
+      <div class="ats-badges">
+        <span class="badge badge-positive">+64% Productivity</span>
+        <span class="badge badge-positive">+68% CSAT</span>
+        <span class="badge badge-info">ERP Rollout: KSA & UAE</span>
+      </div>
+    </section>
 
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Professional Summary</h2>
-        <p style="font-size:12.5px; margin:0;">
-          Sales Operations & Account Management specialist with 7+ years of experience in CRM/ERP administration (Microsoft Dynamics GP, Citrix),
-          forecasting, revenue booking, and data-driven performance analysis. Proven at streamlining processes, improving client satisfaction,
-          and supporting revenue growth across KSA & UAE.
-        </p>
-      </section>
+    <section class="ats-section pb-avoid">
+      <h2 class="ats-title">Professional Summary</h2>
+      <p class="ats-soft">
+        Sales Operations &amp; Account Management specialist with 7+ years in CRM/ERP administration (Microsoft Dynamics GP, Citrix),
+        forecasting, revenue booking, and performance analytics. Known for streamlining processes, improving client satisfaction,
+        and supporting revenue growth across KSA &amp; UAE with clear SOPs and actionable dashboards.
+      </p>
+    </section>
 
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Core Skills</h2>
-        <p style="font-size:12.5px; margin:0;">
-          Sales Operations; Key Account Management; CRM/ERP (Microsoft Dynamics GP, Citrix); Forecasting & Revenue Booking; KPI Dashboards & BI;
-          Process Optimization; Cross-functional Collaboration; Advanced Excel; Power BI; Data Integrity & Training; SOPs & Governance.
-        </p>
-      </section>
+    <section class="ats-section pb-avoid">
+      <h2 class="ats-title">Core Skills</h2>
+      <ul class="ats-list">
+        <li>Sales Operations; Order Mgmt; Asset Tracking; Revenue Booking &amp; Forecasting</li>
+        <li>Key Account Management; Retention &amp; Upsell/Cross-sell; Client Escalation Handling</li>
+        <li>CRM/ERP: Microsoft Dynamics GP, Citrix; Data Integrity; User Training</li>
+        <li>KPI Dashboards; BI &amp; Forecasting; Insights &amp; Recommendations</li>
+        <li>Process Optimization; SOPs; Cross-functional Collaboration (Finance, Logistics, IT)</li>
+        <li>Excel (Advanced), Power BI; Reporting Automation</li>
+      </ul>
+    </section>
 
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Experience</h2>
+    <section class="ats-section">
+      <h2 class="ats-title">Experience</h2>
 
-        <div style="margin-top:6px;">
-          <div style="font-weight:700; font-size:13.5px;">Senior Key Accounts Management & Sales Operations Analyst</div>
-          <div style="font-size:12.5px;">Petroleum & Energy Logistics and Services Co. — Jul 2018 – Present · Dhahran, Saudi Arabia</div>
-          <ul style="margin:6px 0 0 18px; font-size:12.5px;">
-            <li>Led sales operations (forecasting, reporting, pipeline tracking) and served as primary liaison for key accounts.</li>
-            <li>Analyzed sales/performance data to identify trends, risks, and opportunities; delivered actionable insights to leadership.</li>
-            <li>Oversaw dual ERP systems (Citrix & Microsoft Dynamics GP): sales entries, asset tracking, revenue booking, compliance.</li>
-            <li>Standardized processes and SOPs across regions; improved operational efficiency and client satisfaction.</li>
-            <li>Supported pricing reviews, contract renewals, and account optimization with finance, logistics, and IT.</li>
-          </ul>
-        </div>
-
-        <div style="margin-top:8px;">
-          <div style="font-weight:700; font-size:13.5px;">Senior Customer Service & Operations Support Specialist</div>
-          <div style="font-size:12.5px;">Emdad Alkhebrat – ELM Company — Aug 2017 – Jul 2018 · Dammam, Saudi Arabia</div>
-          <ul style="margin:6px 0 0 18px; font-size:12.5px;">
-            <li>Analyzed and tracked passenger processing times; built KPI reports for service efficiency.</li>
-            <li>Monitored operations across arrival/departure areas to optimize coordination and passenger experience.</li>
-            <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Education</h2>
-        <div style="font-size:12.5px;">
-          <div style="font-weight:700;">Bachelor's Degree in Information Technology</div>
-          Saudi Electronic University — 2018 – 2022
-        </div>
-      </section>
-
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Certifications & Awards</h2>
-        <ul style="margin:6px 0 0 18px; font-size:12.5px;">
-          <li>Microsoft Power BI Data Analyst Professional — Umm Al Qura University (Jan 2025)</li>
-          <li>CompTIA Security+ — Ministry of Communications & IT / Al Khaleej Training (May 2023)</li>
-          <li>IT Specialist — Saudi Council of Engineers</li>
-          <li>“Best Great Strategy Game of Business 2021” — Tiger Offshore Company (Financial process innovation)</li>
+      <div class="ats-role pb-avoid">
+        <h3>Senior Key Accounts Management &amp; Sales Operations Analyst</h3>
+        <div class="company">Petroleum &amp; Energy Logistics and Services Co. — <span class="location">Jul 2018 – Present · Dhahran, Saudi Arabia</span></div>
+        <ul>
+          <li>Develop and maintain strong relationships with key accounts; act as primary liaison to ensure service excellence.</li>
+          <li>Lead sales operations processes: forecasting, reporting, and pipeline tracking to support strategic decisions.</li>
+          <li>Analyze sales/performance data to identify trends, opportunities, and process improvements.</li>
+          <li>Oversee dual ERP systems (Citrix &amp; Microsoft Dynamics GP): sales entries, asset tracking, revenue booking, compliance.</li>
+          <li>Design and implement process improvements with leadership; provide insights from KPI dashboards.</li>
+          <li>Support pricing reviews, contract renewals, and account optimization with cross-functional teams.</li>
+          <li>Monitor market and competitor activities to assess risks and growth opportunities.</li>
         </ul>
-      </section>
+      </div>
 
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Projects</h2>
-        <div style="font-size:12.5px;">
-          <span style="font-weight:700;">CabShare — Android App (Team Leader):</span>
-          Real-time trip matching, departure station tracking, and driver–rider communication for sustainable commuting.
-        </div>
-      </section>
-
-      <section style="margin-top:12px;">
-        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Selected Achievements</h2>
-        <ul style="margin:6px 0 0 18px; font-size:12.5px;">
-          <li>+64% operational productivity via sales cycle optimization.</li>
-          <li>+68% client satisfaction using structured complaint tracking.</li>
-          <li>ERP rollout and training across KSA & UAE, improving efficiency and reporting accuracy.</li>
-          <li>Revived previously uncertain sales, contributing to improved revenue stability.</li>
+      <div class="ats-role pb-avoid">
+        <h3>Senior Customer Service &amp; Operations Support Specialist</h3>
+        <div class="company">Emdad Alkhebrat – ELM Company — <span class="location">Aug 2017 – Jul 2018 · Dammam, Saudi Arabia</span></div>
+        <ul>
+          <li>Analyzed and tracked passenger processing times from arrival to departure; reported on KPIs.</li>
+          <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
+          <li>Monitored operations across arrival/departure areas to optimize coordination and the passenger journey.</li>
+          <li>Generated accurate data reports to support decision-making and operational efficiency.</li>
         </ul>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <section class="ats-section pb-avoid">
+      <h2 class="ats-title">Education</h2>
+      <div><strong>Bachelor's Degree in Information Technology</strong> — Saudi Electronic University (2018 – 2022)</div>
+      <ul class="ats-list">
+        <li>Database Management &amp; Systems Design; Business Information Systems &amp; ERP</li>
+        <li>Data Analysis &amp; Business Intelligence; Network Administration &amp; Security</li>
+        <li>Project Management &amp; System Implementation</li>
+      </ul>
+    </section>
+
+    <section class="ats-section pb-avoid">
+      <h2 class="ats-title">Certifications &amp; Awards</h2>
+      <ul class="ats-list">
+        <li>Microsoft Power BI Data Analyst Professional — Umm Al Qura University (Jan 2025)</li>
+        <li>CompTIA Security+ — Ministry of Communications &amp; IT / Al Khaleej Training (May 2023)</li>
+        <li>IT Specialist — Saudi Council of Engineers</li>
+        <li>“Best Great Strategy Game of Business 2021” — Tiger Offshore Company (Financial process innovation)</li>
+      </ul>
+    </section>
+
+    <section class="ats-section pb-avoid">
+      <h2 class="ats-title">Projects</h2>
+      <div><span class="ats-kicker">CabShare — Android App (Team Leader):</span> Real-time trip matching, departure station tracking, and driver–rider communication for sustainable commuting.</div>
+    </section>
+
+    <section class="ats-section pb-avoid">
+      <h2 class="ats-title">Selected Achievements</h2>
+      <ul class="ats-list">
+        <li><strong>+64% operational productivity</strong> via sales cycle optimization.</li>
+        <li><strong>+68% client satisfaction</strong> using structured complaint tracking.</li>
+        <li>ERP rollout &amp; training across <strong>KSA &amp; UAE</strong>, improving efficiency and reporting accuracy.</li>
+        <li>Revived previously uncertain sales, contributing to improved revenue stability.</li>
+      </ul>
+    </section>
   </div>
 
-  <!-- Toast -->
+  <!-- Toast (screen) -->
   <div id="toast" class="screen-only fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
     <div class="rounded-xl bg-gray-900 text-white px-4 py-3 shadow-glow text-center">Done ✅</div>
   </div>
@@ -442,7 +486,7 @@
       if (y) y.textContent = new Date().getFullYear();
     });
 
-    // Smooth scroll (screen)
+    // Smooth scroll
     document.querySelectorAll('.screen-only a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         const id = link.getAttribute('href');
@@ -477,11 +521,10 @@
     }
     const copyLinkBtn = document.getElementById('copyLink');
     if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => copyToClipboard(window.location.href));
-
     const copyEmailBtn = document.getElementById('copyEmail');
     if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard('mo.subaie@gmail.com'));
 
-    // Print to PDF (ATS layout automatically used by CSS)
+    // Print to PDF (ATS layout used via CSS @media print)
     const printBtn = document.getElementById('printBtn');
     if (printBtn) {
       printBtn.addEventListener('click', () => {

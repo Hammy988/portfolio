@@ -6,121 +6,110 @@
   <title>Mohammed Al Subaie — Sales Operations & Account Management</title>
   <meta name="description" content="Senior specialist in Sales Operations and Account Management with 7+ years experience in CRM administration, business analysis, and process optimization." />
 
-  <!-- Open Graph for better link previews -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Mohammed Al Subaie — Sales Operations & Account Management" />
   <meta property="og:description" content="Senior professional with 7+ years in sales operations, account management, CRM administration, and business performance analysis." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
+  <meta property="og:url" content="https://hammy988.github.io/portfolio/" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohammed Al Subaie — Sales Operations & Account Management" />
   <meta name="twitter:description" content="Senior professional with 7+ years in sales operations, account management, CRM administration, and business performance analysis." />
 
-  <!-- Fonts + Tailwind -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio,line-clamp"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
-            brand: {
-              50:  '#EFF6FF',
-              100: '#DBEAFE',
-              200: '#BFDBFE',
-              300: '#93C5FD',
-              400: '#60A5FA',
-              500: '#3B82F6',
-              600: '#2563EB',
-              700: '#1D4ED8',
-              800: '#1E40AF',
-              900: '#1E3A8A'
-            },
-            accent: {
-              50:  '#ECFDF5',
-              100: '#D1FAE5',
-              200: '#A7F3D0',
-              300: '#6EE7B7',
-              400: '#34D399',
-              500: '#10B981',
-              600: '#059669',
-              700: '#047857',
-              800: '#065F46',
-              900: '#064E3B'
-            }
+            brand: {50:'#EFF6FF',100:'#DBEAFE',200:'#BFDBFE',300:'#93C5FD',400:'#60A5FA',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8',800:'#1E40AF',900:'#1E3A8A'},
+            accent:{50:'#ECFDF5',100:'#D1FAE5',200:'#A7F3D0',300:'#6EE7B7',400:'#34D399',500:'#10B981',600:'#059669',700:'#047857',800:'#065F46',900:'#064E3B'}
           },
           boxShadow: {
-            glow: '0 10px 30px rgba(59,130,246,0.15)',
-            soft: '0 4px 20px rgba(0,0,0,0.08)',
-            card: '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)'
+            glow:'0 10px 30px rgba(59,130,246,0.15)',
+            soft:'0 4px 20px rgba(0,0,0,0.08)',
+            card:'0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)'
           }
         }
       }
     }
   </script>
+
   <style>
+    /* --- Compact layout + fallback if Tailwind fails to load --- */
+    :root { --brand:#2563EB; --accent:#10B981; }
+    html { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    header > .mx-auto, main, footer { max-width: 1024px; margin-inline:auto; }
+    .brand-wrap { display:flex; align-items:center; gap:.75rem; }
+    .brand-logo { width:48px; height:48px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg,var(--brand),#059669); color:#fff; font-weight:800; }
+    .brand-name { font-weight:800; line-height:1.1; }
+    .brand-title { font-size:.9rem; color:#4b5563; }
+    .btn { display:inline-flex; align-items:center; gap:.4rem; padding:.5rem .7rem; border-radius:.5rem; font-weight:600; }
+    .btn-ghost { background:#f3f4f6; color:#374151; }
+    .btn-ghost:hover { background:#e5e7eb; }
+    .btn-grad { color:#fff; background:linear-gradient(90deg,var(--brand),#059669); }
+    .btn-grad:hover { filter:brightness(.95); }
+
     /* Print the FULL themed page */
     @media print {
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       html, body { background: white !important; }
-      /* Keep theme but avoid sticky overlap */
       #topnav { position: static !important; }
-      /* Avoid bad page breaks */
       section, article, .card { break-inside: avoid; page-break-inside: avoid; }
-      /* Hide only floating UI */
       #backToTop, #toast { display: none !important; }
-      /* Show link URLs in print */
-      a[href^="http"]::after { content: " (" attr(href) ")"; font-weight: normal; color: #6b7280; }
+      a[href^="http"]::after { content:" (" attr(href) ")"; color:#6b7280; }
     }
   </style>
 </head>
 <body class="font-sans text-gray-900 antialiased bg-gray-50">
-  <!-- Background -->
-  <div id="site-bg" class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
+  <!-- Gradient Background -->
+  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
   <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
        style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
 
-  <!-- Top Navigation -->
+  <!-- Header -->
   <header id="topnav" class="sticky top-0 z-50 bg-blue-50/90 backdrop-blur-md border-b border-blue-200">
-    <div class="mx-auto max-w-6xl px-5">
-      <div class="flex items-center justify-between py-4">
-        <a href="#" class="group inline-flex items-center gap-3">
-          <span class="inline-grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-600 to-accent-600 text-white shadow-glow font-bold text-lg">MS</span>
+    <div class="mx-auto px-5">
+      <div class="flex items-center justify-between py-3">
+        <a href="#" class="brand-wrap group">
+          <span class="brand-logo shadow-glow text-lg">MS</span>
           <div>
-            <div class="text-gray-900 font-bold leading-tight group-hover:text-brand-600 transition-colors">Mohammed Al Subaie</div>
-            <div class="text-sm text-gray-600">Sales Operations & Account Management Specialist</div>
+            <div class="brand-name group-hover:text-brand-600 transition-colors text-[1.05rem]">Mohammed Al Subaie</div>
+            <div class="brand-title">Sales Operations &amp; Account Management Specialist</div>
           </div>
         </a>
-        <nav class="hidden md:flex items-center gap-1">
-          <a href="#about" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">About</a>
-          <a href="#skills" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Skills</a>
-          <a href="#experience" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Experience</a>
-          <a href="#education" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Education</a>
-          <a href="#achievements" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Achievements</a>
-          <a href="#projects" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Projects</a>
-          <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Contact</a>
+        <nav class="hidden md:flex items-center gap-1 text-sm">
+          <a href="#about" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">About</a>
+          <a href="#skills" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Skills</a>
+          <a href="#experience" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Experience</a>
+          <a href="#education" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Education</a>
+          <a href="#certifications" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Certifications</a>
+          <a href="#achievements" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Achievements</a>
+          <a href="#projects" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Projects</a>
+          <a href="#contact" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Contact</a>
         </nav>
-        <div class="flex items-center gap-3">
-          <button id="copyLink" class="hidden sm:inline-flex items-center rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 text-sm font-medium transition">
-            <span class="mr-2">🔗</span> Copy link
-          </button>
-          <button id="downloadBtn" class="inline-flex items-center rounded-lg bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-700 hover:to-accent-700 text-white px-4 py-2 text-sm font-semibold shadow-glow transition">
-            <span class="mr-2">⬇️</span> Save / Print PDF
-          </button>
+        <div class="flex items-center gap-2">
+          <button id="copyLink" class="btn btn-ghost text-xs sm:text-sm"><span>🔗</span>Copy link</button>
+          <button id="downloadBtn" class="btn btn-grad text-xs sm:text-sm shadow-glow"><span>⬇️</span>Save / Print PDF</button>
           <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 hover:bg-gray-200" aria-label="Open menu">☰</button>
         </div>
       </div>
       <!-- Mobile menu -->
-      <div id="mobileMenu" class="md:hidden hidden pb-4">
+      <div id="mobileMenu" class="md:hidden hidden pb-3">
         <div class="grid gap-1">
           <a href="#about" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">About</a>
           <a href="#skills" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Skills</a>
           <a href="#experience" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Experience</a>
           <a href="#education" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Education</a>
+          <a href="#certifications" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Certifications</a>
           <a href="#achievements" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Achievements</a>
           <a href="#projects" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Projects</a>
           <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Contact</a>
@@ -129,160 +118,131 @@
     </div>
   </header>
 
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <!-- Hero / About -->
-    <section id="about" class="pt-16 sm:pt-24 lg:pt-32">
+  <!-- Main -->
+  <main class="mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- About -->
+    <section id="about" class="pt-12">
       <div class="max-w-5xl">
-        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-4 py-2 text-sm font-medium mb-8">
-          📍 Al Khobar, Saudi Arabia
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900">
+        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">📍 Al Khobar, Saudi Arabia</div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-gray-900">
           Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Mohammed Al Subaie</span>
         </h1>
-        <p class="mt-8 text-xl sm:text-2xl text-gray-700 leading-relaxed max-w-4xl">Senior-level professional with 7+ years in account management, sales operations, CRM administration, and business performance analysis. I streamline processes, improve client satisfaction, and support revenue growth with data-driven insights.</p>
-        <div id="cta-buttons" class="mt-8 flex flex-wrap gap-4">
-          <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-semibold shadow-glow transition">
-            ✉️ Email Me
-          </a>
-          <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-6 py-3 font-semibold transition">
-            💼 LinkedIn
-          </a>
-          <a href="#projects" class="inline-flex items-center rounded-xl bg-white hover:bg-gray-50 text-gray-700 px-6 py-3 font-semibold border border-gray-300 transition">
-            🚀 View Projects
-          </a>
+        <p class="mt-5 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl">
+          Senior-level professional with 7+ years in account management, sales operations, CRM administration, and business performance analysis.
+          I streamline processes, improve client satisfaction, and support revenue growth with data-driven insights.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 font-semibold shadow-glow transition">✉️ Email Me</a>
+          <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-4 py-2.5 font-semibold transition">💼 LinkedIn</a>
+          <a href="#projects" class="inline-flex items-center rounded-xl bg-white hover:bg-gray-50 text-gray-700 px-4 py-2.5 font-semibold border border-gray-300 transition">🚀 View Projects</a>
         </div>
 
-        <div class="mt-8 flex flex-wrap items-center gap-3">
-          <span class="rounded-full bg-brand-100 text-brand-800 px-4 py-2 text-sm font-medium">Sales Operations</span>
-          <span class="rounded-full bg-accent-100 text-accent-800 px-4 py-2 text-sm font-medium">Key Account Management</span>
-          <span class="rounded-full bg-purple-100 text-purple-800 px-4 py-2 text-sm font-medium">CRM & ERP</span>
-          <span class="rounded-full bg-orange-100 text-orange-800 px-4 py-2 text-sm font-medium">Business Analysis</span>
-          <span class="rounded-full bg-blue-100 text-blue-800 px-4 py-2 text-sm font-medium">Process Optimization</span>
+        <div class="mt-6 flex flex-wrap items-center gap-2.5">
+          <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Sales Operations</span>
+          <span class="rounded-full bg-accent-100 text-accent-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Key Account Management</span>
+          <span class="rounded-full bg-purple-100 text-purple-800 px-3 py-1.5 text-xs sm:text-sm font-medium">CRM & ERP</span>
+          <span class="rounded-full bg-orange-100 text-orange-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Business Analysis</span>
+          <span class="rounded-full bg-blue-100 text-blue-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Process Optimization</span>
         </div>
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="mt-20 sm:mt-32">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">Core Skills</h2>
+    <section id="skills" class="mt-12">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Core Skills</h2>
         <div class="flex flex-wrap gap-2">
-          <button data-filter="all" class="filter-btn active rounded-full bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 text-sm font-medium transition">All</button>
-          <button data-filter="ops" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 text-sm font-medium transition">Operations</button>
-          <button data-filter="accounts" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 text-sm font-medium transition">Accounts</button>
-          <button data-filter="systems" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 text-sm font-medium transition">Systems</button>
-          <button data-filter="analysis" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 text-sm font-medium transition">Analysis</button>
-          <button data-filter="tools" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 text-sm font-medium transition">Tools</button>
+          <button data-filter="all" class="filter-btn active rounded-full bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 text-xs sm:text-sm font-medium transition">All</button>
+          <button data-filter="ops" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Operations</button>
+          <button data-filter="accounts" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Accounts</button>
+          <button data-filter="systems" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Systems</button>
+          <button data-filter="analysis" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Analysis</button>
+          <button data-filter="tools" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Tools</button>
         </div>
       </div>
-      <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="ops">
-          <div class="font-bold text-xl mb-4 text-gray-900">Sales Operations</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Order management and processing</li>
-            <li>• Asset tracking and inventory control</li>
-            <li>• Revenue booking and forecasting</li>
-          </ul>
+      <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="ops">
+          <div class="font-bold text-xl mb-3 text-gray-900">Sales Operations</div>
+          <ul class="text-gray-600 space-y-2"><li>• Order management and processing</li><li>• Asset tracking and inventory control</li><li>• Revenue booking and forecasting</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="accounts">
-          <div class="font-bold text-xl mb-4 text-gray-900">Key Account Management</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Multinational client relationship management</li>
-            <li>• Customer retention and satisfaction</li>
-            <li>• Upselling and cross-selling strategies</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="accounts">
+          <div class="font-bold text-xl mb-3 text-gray-900">Key Account Management</div>
+          <ul class="text-gray-600 space-y-2"><li>• Multinational client relationship management</li><li>• Customer retention and satisfaction</li><li>• Upselling and cross-selling strategies</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
-          <div class="font-bold text-xl mb-4 text-gray-900">CRM & ERP Administration</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Microsoft Dynamics GP implementation</li>
-            <li>• Citrix system administration</li>
-            <li>• Data integrity and user training</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
+          <div class="font-bold text-xl mb-3 text-gray-900">CRM & ERP Administration</div>
+          <ul class="text-gray-600 space-y-2"><li>• Microsoft Dynamics GP implementation</li><li>• Citrix system administration</li><li>• Data integrity and user training</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="analysis">
-          <div class="font-bold text-xl mb-4 text-gray-900">Business & Data Analysis</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Performance reporting and dashboards</li>
-            <li>• Data-driven insights and recommendations</li>
-            <li>• Business intelligence and forecasting</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="analysis">
+          <div class="font-bold text-xl mb-3 text-gray-900">Business & Data Analysis</div>
+          <ul class="text-gray-600 space-y-2"><li>• Performance reporting and dashboards</li><li>• Data-driven insights and recommendations</li><li>• Business intelligence and forecasting</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="analysis">
-          <div class="font-bold text-xl mb-4 text-gray-900">Data Reporting</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Performance dashboard creation</li>
-            <li>• Status tracking and monitoring</li>
-            <li>• Automated reporting systems</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="analysis">
+          <div class="font-bold text-xl mb-3 text-gray-900">Data Reporting</div>
+          <ul class="text-gray-600 space-y-2"><li>• Performance dashboard creation</li><li>• Status tracking and monitoring</li><li>• Automated reporting systems</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="tools">
-          <div class="font-bold text-xl mb-4 text-gray-900">Process Optimization</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Cross-functional team collaboration</li>
-            <li>• Workflow streamlining and efficiency</li>
-            <li>• Standard operating procedures</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="tools">
+          <div class="font-bold text-xl mb-3 text-gray-900">Process Optimization</div>
+          <ul class="text-gray-600 space-y-2"><li>• Cross-functional team collaboration</li><li>• Workflow streamlining and efficiency</li><li>• Standard operating procedures</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="tools">
-          <div class="font-bold text-xl mb-4 text-gray-900">Excel (Advanced)</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Pivot tables and complex formulas</li>
-            <li>• Data analysis and visualization</li>
-            <li>• Process automation with macros</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="tools">
+          <div class="font-bold text-xl mb-3 text-gray-900">Excel (Advanced)</div>
+          <ul class="text-gray-600 space-y-2"><li>• Pivot tables and complex formulas</li><li>• Data analysis and visualization</li><li>• Process automation with macros</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
-          <div class="font-bold text-xl mb-4 text-gray-900">Microsoft Dynamics GP</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Financial module management</li>
-            <li>• Operations and inventory control</li>
-            <li>• Multi-region implementation</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
+          <div class="font-bold text-xl mb-3 text-gray-900">Microsoft Dynamics GP</div>
+          <ul class="text-gray-600 space-y-2"><li>• Financial module management</li><li>• Operations and inventory control</li><li>• Multi-region implementation</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
-          <div class="font-bold text-xl mb-4 text-gray-900">Citrix</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Remote access administration</li>
-            <li>• User management and permissions</li>
-            <li>• System maintenance and support</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
+          <div class="font-bold text-xl mb-3 text-gray-900">Citrix</div>
+          <ul class="text-gray-600 space-y-2"><li>• Remote access administration</li><li>• User management and permissions</li><li>• System maintenance and support</li></ul>
         </div>
-
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="accounts">
-          <div class="font-bold text-xl mb-4 text-gray-900">Customer Success</div>
-          <ul class="text-gray-600 space-y-2">
-            <li>• Client satisfaction measurement</li>
-            <li>• Retention strategy development</li>
-            <li>• Feedback loop implementation</li>
-          </ul>
+        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="accounts">
+          <div class="font-bold text-xl mb-3 text-gray-900">Customer Success</div>
+          <ul class="text-gray-600 space-y-2"><li>• Client satisfaction measurement</li><li>• Retention strategy development</li><li>• Feedback loop implementation</li></ul>
         </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="mt-20 sm:mt-32">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Experience</h2>
-      <div class="grid gap-8">
+    <section id="experience" class="mt-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Experience</h2>
+      <div class="grid gap-6">
         <!-- Role 1 -->
-        <article class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+        <article class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Senior Customer Service & Operations Support Specialist</h3>
-              <p class="text-lg text-brand-600 font-semibold">Emdad Alkhebrat – ELM Company</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Senior Key Accounts Management & Sales Operations Analyst</h3>
+              <p class="text-base text-brand-600 font-semibold">Petroleum & Energy Logistics and Services Co.</p>
+              <p class="text-gray-500 font-medium">Jul 2018 — Present · Dhahran, Saudi Arabia</p>
+            </div>
+            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-semibold">Accounts · Sales Ops · ERP</span>
+          </div>
+          <ul class="list-disc pl-6 space-y-2.5 text-gray-700 leading-relaxed">
+            <li>Develop and maintain strong relationships with key accounts, ensuring client needs are met and service delivery exceeds expectations.</li>
+            <li>Act as the primary liaison between clients and internal teams, facilitating clear communication and swift issue resolution.</li>
+            <li>Lead sales operations processes, including forecasting, reporting, and pipeline tracking to support strategic decisions.</li>
+            <li>Analyze sales and performance data to identify trends, uncover opportunities, and recommend process improvements.</li>
+            <li>Oversee and maintain dual ERP systems (Citrix and Microsoft Dynamics GP), managing sales entries, asset tracking, and revenue booking to ensure accurate reporting, compliance, and seamless operational flow across regions.</li>
+            <li>Collaborate with management to design and implement process improvements that enhance operational efficiency and customer satisfaction.</li>
+            <li>Provide insights and recommendations to senior leadership based on in-depth analysis of sales metrics and operational data.</li>
+            <li>Support pricing strategy reviews, complex contract renewals, and account optimization in coordination with leadership.</li>
+            <li>Monitor market developments and competitor activities to identify risks and growth opportunities.</li>
+            <li>Coordinate with cross-functional teams, including finance, logistics, and IT, to ensure smooth execution of account plans and business objectives.</li>
+          </ul>
+        </article>
+
+        <!-- Role 2 -->
+        <article class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Senior Customer Service & Operations Support Specialist</h3>
+              <p class="text-base text-brand-600 font-semibold">Emdad Alkhebrat – ELM Company</p>
               <p class="text-gray-500 font-medium">Aug 2017 — Jul 2018 · Dammam, Saudi Arabia</p>
             </div>
-            <span class="rounded-full bg-accent-100 text-accent-800 px-4 py-2 text-sm font-semibold">Service Ops · Client Care</span>
+            <span class="rounded-full bg-accent-100 text-accent-800 px-3 py-1.5 text-xs sm:text-sm font-semibold">Service Ops · Client Care</span>
           </div>
-          <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
+          <ul class="list-disc pl-6 space-y-2.5 text-gray-700 leading-relaxed">
             <li>Analyzed and tracked passenger processing times data from arrival to departure.</li>
             <li>Monitored key performance indicators related to passenger flow and service efficiency.</li>
             <li>Prepared detailed reports to aid in performance evaluation and process improvement.</li>
@@ -294,10 +254,10 @@
     </section>
 
     <!-- Education -->
-    <section id="education" class="mt-20 sm:mt-32">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Education</h2>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+    <section id="education" class="mt-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Education</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
           <h3 class="text-xl font-bold text-gray-900 mb-2">Bachelor's Degree in Information Technology</h3>
           <p class="text-brand-600 font-semibold mb-4">Saudi Electronic University · 2018 — 2022</p>
           <ul class="list-disc pl-6 text-gray-700 space-y-2">
@@ -308,59 +268,73 @@
             <li>Project Management and System Implementation</li>
           </ul>
         </div>
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Certifications & Awards</h3>
-          <ul class="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Microsoft Power BI Data Analyst Professional MS-Power-BI — Umm Al Qura University · Jan 2025</li>
-            <li>CompTIA Security+ — Ministry of Communications & IT / Al Khaleej Training · May 2023</li>
-            <li>IT Specialist — Saudi Council of Engineers</li>
-            <li>"Best Great Strategy Game of Business 2021" — Tiger Offshore (financial process innovation)</li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Certifications & Awards (separate section) -->
+    <section id="certifications" class="mt-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Certifications & Awards</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
+          <div class="font-semibold text-lg text-gray-900">Microsoft Power BI Data Analyst Professional (MS-Power-BI)</div>
+          <div class="text-sm text-gray-600 mt-1">Umm Al Qura University — Jan 2025</div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
+          <div class="font-semibold text-lg text-gray-900">CompTIA Security+</div>
+          <div class="text-sm text-gray-600 mt-1">Ministry of Communications & IT / Al Khaleej Training — May 2023</div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
+          <div class="font-semibold text-lg text-gray-900">IT Specialist</div>
+          <div class="text-sm text-gray-600 mt-1">Saudi Council of Engineers</div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
+          <div class="font-semibold text-lg text-gray-900">“Best Great Strategy Game of Business 2021”</div>
+          <div class="text-sm text-gray-600 mt-1">Tiger Offshore Company (Financial process innovation)</div>
         </div>
       </div>
     </section>
 
     <!-- Achievements -->
-    <section id="achievements" class="mt-20 sm:mt-32">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">Achievements</h2>
+    <section id="achievements" class="mt-12">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Achievements</h2>
         <div class="text-gray-600 font-medium">Key Highlights</div>
       </div>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-3">+64%</div>
-          <p class="text-gray-700 font-semibold mb-4">Operational productivity through sales cycle optimization</p>
+        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="text-3xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">+64%</div>
+          <p class="text-gray-700 font-semibold mb-3">Operational productivity through sales cycle optimization</p>
           <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
           <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">Streamlined steps and improved data handoffs to reduce delays.</div>
         </div>
 
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-3">+68%</div>
-          <p class="text-gray-700 font-semibold mb-4">Client satisfaction using structured complaint tracking</p>
+        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="text-3xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">+68%</div>
+          <p class="text-gray-700 font-semibold mb-3">Client satisfaction using structured complaint tracking</p>
           <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
           <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">Built a simple tracking loop to address issues faster and clearer.</div>
         </div>
 
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-3">2 countries</div>
-          <p class="text-gray-700 font-semibold mb-4">ERP implementation across KSA & UAE</p>
+        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="text-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">2 countries</div>
+          <p class="text-gray-700 font-semibold mb-3">ERP implementation across KSA & UAE</p>
           <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
           <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">Led rollout and training, improving efficiency and reporting accuracy.</div>
         </div>
 
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-3">🏆 Award</div>
-          <p class="text-gray-700 font-semibold mb-4">"Best Great Strategy Game of Business 2021" — Tiger Offshore Company, USA</p>
+        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="text-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">🏆 Award</div>
+          <p class="text-gray-700 font-semibold mb-3">“Best Great Strategy Game of Business 2021” — Tiger Offshore Company, USA</p>
           <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
           <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">
-            <p>Awarded for exceptional financial innovation, developing innovative invoicing techniques including the 7-mile stone approach that enhanced cash flow and maximized financial efficiency.</p>
+            <p>Awarded for exceptional financial innovation, developing innovative invoicing techniques including the 7-milestone approach that enhanced cash flow and maximized financial efficiency.</p>
           </div>
         </div>
 
-        <div class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-4xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-3">💰 Sales</div>
-          <p class="text-gray-700 font-semibold mb-4">Successfully revived previously uncertain sales</p>
+        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="text-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">💰 Sales</div>
+          <p class="text-gray-700 font-semibold mb-3">Successfully revived previously uncertain sales</p>
           <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
           <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">
             <p>Resolved previously uncertain sales situations, leading to improved revenue and greater financial stability for the organization.</p>
@@ -370,23 +344,23 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="mt-20 sm:mt-32">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">Projects</h2>
+    <section id="projects" class="mt-12">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Projects</h2>
         <div class="text-gray-600 font-medium">Selected work</div>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-2">
-        <article class="bg-blue-50/60 rounded-2xl p-8 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="flex items-start justify-between gap-4 mb-6">
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
+          <div class="flex items-start justify-between gap-4 mb-4">
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">CabShare — Android App (Team Leader)</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">CabShare — Android App (Team Leader)</h3>
               <p class="text-gray-600 font-medium">Ride-sharing · Database Management · Communication System</p>
             </div>
             <span class="rounded-full bg-purple-100 text-purple-800 px-3 py-1 text-sm font-semibold">Leadership</span>
           </div>
           <p class="text-gray-700 leading-relaxed mb-4">Led the development of an Android application that enables commuters to share rides in their city for faster, affordable, and eco-friendly transportation. Built optimal communication between drivers and users with departure station information, trip offers, and scheduling features.</p>
-          <div class="text-gray-700 mb-6">
+          <div class="text-gray-700 mb-3">
             <p><strong>Key Features:</strong> Database integration for user and driver data storage, real-time trip matching, departure station tracking, and sustainable commuting solutions.</p>
           </div>
           <div class="flex flex-wrap gap-3">
@@ -397,20 +371,14 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mt-20 sm:mt-32 mb-20">
-      <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-3xl p-1">
-        <div class="bg-blue-50/80 rounded-[22px] p-8 sm:p-12 lg:p-16">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">Let's connect</h2>
+    <section id="contact" class="mt-12 mb-16">
+      <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-2xl p-1">
+        <div class="bg-blue-50/80 rounded-2xl p-6 sm:p-8 lg:p-12">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Let's connect</h2>
           <div class="flex flex-wrap gap-4">
-            <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-semibold shadow-glow transition">
-              ✉️ Email Me
-            </a>
-            <a href="https://www.linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-6 py-3 font-semibold transition">
-              💼 LinkedIn
-            </a>
-            <button id="copyEmail" class="inline-flex items-center rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 font-semibold transition">
-              📋 Copy email
-            </button>
+            <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-semibold shadow-glow transition">✉️ Email Me</a>
+            <a href="https://www.linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-6 py-3 font-semibold transition">💼 LinkedIn</a>
+            <button id="copyEmail" class="inline-flex items-center rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 font-semibold transition">📋 Copy email</button>
           </div>
         </div>
       </div>
@@ -418,7 +386,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 text-gray-600">
+  <footer class="mx-auto px-4 sm:px-6 lg:px-8 pb-10 text-gray-600">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© <span id="year"></span> Mohammed Al Subaie. All rights reserved.</p>
       <div class="text-sm">Professional · Clean · Easy to share</div>
@@ -431,9 +399,9 @@
   </div>
 
   <!-- Back to top -->
-  <button id="backToTop" class="fixed bottom-5 right-5 hidden h-12 w-12 rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-glow" aria-label="Back to top">↑</button>
+  <button id="backToTop" class="fixed bottom-5 right-5 hidden h-10 w-10 rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-glow" aria-label="Back to top">↑</button>
 
-  <!-- Schema.org for better SEO -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -441,20 +409,14 @@
     "name":"Mohammed Al Subaie",
     "jobTitle":"Sales Operations & Account Management Specialist",
     "email":"mo.subaie@gmail.com",
-    "address": {
-      "@type":"PostalAddress",
-      "addressLocality":"Al Khobar",
-      "addressCountry":"Saudi Arabia"
-    },
-    "sameAs":[
-      "https://www.linkedin.com/in/mohammed-al-subaie-28159089"
-    ]
+    "address": {"@type":"PostalAddress","addressLocality":"Al Khobar","addressCountry":"Saudi Arabia"},
+    "sameAs":["https://www.linkedin.com/in/mohammed-al-subaie-28159089"]
   }
   </script>
 
   <!-- Interactions -->
   <script>
-    // Utility: Toast
+    // Toast
     function showToast(message) {
       const toast = document.getElementById('toast');
       if (!toast) return;
@@ -464,10 +426,10 @@
       window.__toastTimer = setTimeout(() => toast.classList.add('hidden'), 1600);
     }
 
-    // Set current year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Smooth scrolling for internal links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         const id = link.getAttribute('href');
@@ -481,14 +443,14 @@
       });
     });
 
-    // Mobile menu toggle
+    // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     }
 
-    // Back to top visibility + action
+    // Back to top
     const backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
       window.addEventListener('scroll', () => {
@@ -497,7 +459,7 @@
       backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
 
-    // Details toggles (accordion-like)
+    // Details toggles
     document.querySelectorAll('.toggle-details').forEach(button => {
       button.addEventListener('click', () => {
         const details = button.nextElementSibling;
@@ -530,44 +492,35 @@
       });
     }));
 
-    // Clipboard helpers
+    // Clipboard
     async function copyToClipboard(text) {
       try {
         await navigator.clipboard.writeText(text);
         showToast('Copied ✅');
       } catch (e) {
-        // Fallback: selectable prompt
         const tmp = document.createElement('textarea');
         tmp.value = text; document.body.appendChild(tmp); tmp.select();
         try { document.execCommand('copy'); showToast('Copied ✅'); } catch(_) { alert(text); }
         document.body.removeChild(tmp);
       }
     }
-
     const copyLinkBtn = document.getElementById('copyLink');
     if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => copyToClipboard(window.location.href));
-
     const copyEmailBtn = document.getElementById('copyEmail');
     if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard('mo.subaie@gmail.com'));
 
-    // Print the FULL themed page: expand all details, ensure all skills visible, then call print
+    // Print (expand everything first)
     function prepareAndPrintFullPage() {
-      // Expand all details panels
       document.querySelectorAll('.details').forEach(p => p.classList.remove('hidden'));
       document.querySelectorAll('.toggle-details').forEach(b => b.textContent = 'Hide details ↑');
-      // Ensure all skills are visible
       const allBtn = Array.from(document.querySelectorAll('.filter-btn')).find(b => b.getAttribute('data-filter') === 'all');
       if (allBtn) allBtn.click();
-      // Print
       window.print();
     }
-
-    // After print, reset UI to default
     window.addEventListener('afterprint', () => {
       document.querySelectorAll('.details').forEach(p => p.classList.add('hidden'));
       document.querySelectorAll('.toggle-details').forEach(b => b.textContent = 'Show details ↓');
     });
-
     const downloadBtn = document.getElementById('downloadBtn');
     if (downloadBtn) downloadBtn.addEventListener('click', () => {
       showToast('Opening print dialog…');

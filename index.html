@@ -3,27 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohammed Al Subaie — Sales Operations & Account Management</title>
-  <meta name="description" content="Senior specialist in Sales Operations and Account Management with 7+ years experience in CRM administration, business analysis, and process optimization." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Mohammed Al Subaie — Sales Operations & Account Management" />
-  <meta property="og:description" content="Senior professional with 7+ years in sales operations, account management, CRM administration, and business performance analysis." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hammy988.github.io/portfolio/" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mohammed Al Subaie — Sales Operations & Account Management" />
-  <meta name="twitter:description" content="Senior professional with 7+ years in sales operations, account management, CRM administration, and business performance analysis." />
-
-  <!-- Google Font -->
+  <title>Mohammed Al Subaie — Portfolio</title>
+  <meta name="description" content="Sales Operations & Account Management specialist with 7+ years of experience in CRM/ERP, data analysis, and process optimization." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -42,395 +27,361 @@
       }
     }
   </script>
-
   <style>
-    /* --- Compact layout + fallback if Tailwind fails to load --- */
-    :root { --brand:#2563EB; --accent:#10B981; }
+    /* Screen layout tweaks (compact) */
     html { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
     header > .mx-auto, main, footer { max-width: 1024px; margin-inline:auto; }
     .brand-wrap { display:flex; align-items:center; gap:.75rem; }
-    .brand-logo { width:48px; height:48px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg,var(--brand),#059669); color:#fff; font-weight:800; }
+    .brand-logo { width:44px; height:44px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg,#2563EB,#059669); color:#fff; font-weight:800; }
     .brand-name { font-weight:800; line-height:1.1; }
     .brand-title { font-size:.9rem; color:#4b5563; }
-    .btn { display:inline-flex; align-items:center; gap:.4rem; padding:.5rem .7rem; border-radius:.5rem; font-weight:600; }
-    .btn-ghost { background:#f3f4f6; color:#374151; }
-    .btn-ghost:hover { background:#e5e7eb; }
-    .btn-grad { color:#fff; background:linear-gradient(90deg,var(--brand),#059669); }
-    .btn-grad:hover { filter:brightness(.95); }
+    .btn-link { font-weight:600; border-radius:.5rem; padding:.4rem .6rem; }
+    .btn-link:hover { background:#eef2ff; }
 
-    /* Print the FULL themed page */
+    /* PRINT: show ATS resume only */
     @media print {
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      html, body { background: white !important; }
-      #topnav { position: static !important; }
-      section, article, .card { break-inside: avoid; page-break-inside: avoid; }
-      #backToTop, #toast { display: none !important; }
-      a[href^="http"]::after { content:" (" attr(href) ")"; color:#6b7280; }
+      html, body { background: #ffffff !important; }
+      .screen-only { display: none !important; }
+      .print-only { display: block !important; }
+      a[href^="http"]::after { content:" (" attr(href) ")"; color:#6b7280; font-weight:400; }
+      @page { margin: 12mm; }
     }
+    /* Hide print-only on screen */
+    .print-only { display: none; }
   </style>
 </head>
-<body class="font-sans text-gray-900 antialiased bg-gray-50">
-  <!-- Gradient Background -->
-  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
-  <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
-       style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Header -->
-  <header id="topnav" class="sticky top-0 z-50 bg-blue-50/90 backdrop-blur-md border-b border-blue-200">
-    <div class="mx-auto px-5">
-      <div class="flex items-center justify-between py-3">
-        <a href="#" class="brand-wrap group">
-          <span class="brand-logo shadow-glow text-lg">MS</span>
-          <div>
-            <div class="brand-name group-hover:text-brand-600 transition-colors text-[1.05rem]">Mohammed Al Subaie</div>
-            <div class="brand-title">Sales Operations &amp; Account Management Specialist</div>
+  <!-- ===== SCREEN PORTFOLIO (hidden on print) ===== -->
+  <div class="screen-only">
+    <!-- Background -->
+    <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
+    <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
+        style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
+
+    <!-- Header -->
+    <header id="topnav" class="sticky top-0 z-50 bg-blue-50/90 backdrop-blur-md border-b border-blue-200">
+      <div class="mx-auto px-5">
+        <div class="flex items-center justify-between py-3">
+          <a href="#" class="brand-wrap group">
+            <span class="brand-logo shadow-glow text-base">MS</span>
+            <div>
+              <div class="brand-name group-hover:text-brand-600 transition-colors text-[1.05rem]">Mohammed Al Subaie</div>
+              <div class="brand-title">Sales Operations &amp; Account Management Specialist</div>
+            </div>
+          </a>
+          <nav class="hidden md:flex items-center gap-1 text-sm">
+            <a href="#about" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">About</a>
+            <a href="#skills" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Skills</a>
+            <a href="#experience" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Experience</a>
+            <a href="#education" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Education</a>
+            <a href="#certifications" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Certifications</a>
+            <a href="#projects" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Projects</a>
+            <a href="#contact" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Contact</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <button id="copyLink" class="btn-link text-brand-700 hover:text-brand-800 text-sm">Copy Link</button>
+            <button id="printBtn" class="btn-link text-brand-700 hover:text-brand-800 text-sm">Print to PDF</button>
+            <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 hover:bg-gray-200" aria-label="Open menu">☰</button>
           </div>
-        </a>
-        <nav class="hidden md:flex items-center gap-1 text-sm">
-          <a href="#about" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">About</a>
-          <a href="#skills" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Skills</a>
-          <a href="#experience" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Experience</a>
-          <a href="#education" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Education</a>
-          <a href="#certifications" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Certifications</a>
-          <a href="#achievements" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Achievements</a>
-          <a href="#projects" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Projects</a>
-          <a href="#contact" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Contact</a>
-        </nav>
-        <div class="flex items-center gap-2">
-          <button id="copyLink" class="btn btn-ghost text-xs sm:text-sm"><span>🔗</span>Copy link</button>
-          <button id="downloadBtn" class="btn btn-grad text-xs sm:text-sm shadow-glow"><span>⬇️</span>Save / Print PDF</button>
-          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 hover:bg-gray-200" aria-label="Open menu">☰</button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden pb-3">
+          <div class="grid gap-1">
+            <a href="#about" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">About</a>
+            <a href="#skills" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Skills</a>
+            <a href="#experience" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Experience</a>
+            <a href="#education" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Education</a>
+            <a href="#certifications" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Certifications</a>
+            <a href="#projects" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Projects</a>
+            <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Contact</a>
+          </div>
         </div>
       </div>
-      <!-- Mobile menu -->
-      <div id="mobileMenu" class="md:hidden hidden pb-3">
-        <div class="grid gap-1">
-          <a href="#about" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">About</a>
-          <a href="#skills" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Skills</a>
-          <a href="#experience" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Experience</a>
-          <a href="#education" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Education</a>
-          <a href="#certifications" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Certifications</a>
-          <a href="#achievements" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Achievements</a>
-          <a href="#projects" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Projects</a>
-          <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Contact</a>
-        </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Main -->
-  <main class="mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- About -->
-    <section id="about" class="pt-12">
-      <div class="max-w-5xl">
-        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">📍 Al Khobar, Saudi Arabia</div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-gray-900">
-          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Mohammed Al Subaie</span>
-        </h1>
-        <p class="mt-5 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl">
-          Senior-level professional with 7+ years in account management, sales operations, CRM administration, and business performance analysis.
-          I streamline processes, improve client satisfaction, and support revenue growth with data-driven insights.
+    <!-- Main -->
+    <main class="mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- About -->
+      <section id="about" class="pt-10">
+        <div class="max-w-5xl">
+          <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">📍 Al Khobar, Saudi Arabia · ✉️ mo.subaie@gmail.com · 💼 linkedin.com/in/mohammed-al-subaie-28159089</div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Mohammed Al Subaie</span>
+          </h1>
+          <p class="mt-4 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl">
+            Senior specialist in Sales Operations, Key Account Management, CRM/ERP administration, and data-driven business analysis. I streamline processes, lift client satisfaction, and support revenue growth with clean ops and actionable dashboards.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="mt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Core Skills</h2>
+        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
+            <div class="font-bold text-lg mb-2">Sales Operations</div>
+            <ul class="text-gray-700 space-y-1.5"><li>Order management & processing</li><li>Asset tracking & inventory control</li><li>Revenue booking & forecasting</li></ul>
+          </div>
+          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
+            <div class="font-bold text-lg mb-2">Key Account Management</div>
+            <ul class="text-gray-700 space-y-1.5"><li>Multinational client relationships</li><li>Retention & satisfaction</li><li>Upsell & cross-sell strategies</li></ul>
+          </div>
+          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
+            <div class="font-bold text-lg mb-2">CRM & ERP Administration</div>
+            <ul class="text-gray-700 space-y-1.5"><li>Microsoft Dynamics GP</li><li>Citrix administration</li><li>Data integrity & training</li></ul>
+          </div>
+          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
+            <div class="font-bold text-lg mb-2">Business & Data Analysis</div>
+            <ul class="text-gray-700 space-y-1.5"><li>Performance dashboards</li><li>BI & forecasting</li><li>Insights & recommendations</li></ul>
+          </div>
+          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
+            <div class="font-bold text-lg mb-2">Process Optimization</div>
+            <ul class="text-gray-700 space-y-1.5"><li>Workflow streamlining</li><li>Cross-functional collaboration</li><li>SOPs & governance</li></ul>
+          </div>
+          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
+            <div class="font-bold text-lg mb-2">Tools</div>
+            <ul class="text-gray-700 space-y-1.5"><li>Excel (advanced)</li><li>Power BI</li><li>ERP/CRM reporting</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="mt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Experience</h2>
+
+        <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200 mb-5">
+          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl font-bold">Senior Key Accounts Management & Sales Operations Analyst</h3>
+              <p class="text-brand-700 font-semibold">Petroleum & Energy Logistics and Services Co.</p>
+              <p class="text-gray-600">Jul 2018 — Present · Dhahran, Saudi Arabia</p>
+            </div>
+            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs font-semibold">Accounts · Sales Ops · ERP</span>
+          </div>
+          <ul class="list-disc pl-6 space-y-2 text-gray-800">
+            <li>Develop and maintain strong relationships with key accounts; act as primary liaison to ensure service excellence.</li>
+            <li>Lead sales operations processes: forecasting, reporting, and pipeline tracking to support strategic decisions.</li>
+            <li>Analyze sales/performance data to identify trends, opportunities, and process improvements.</li>
+            <li>Oversee dual ERP systems (Citrix & Microsoft Dynamics GP): sales entries, asset tracking, revenue booking, compliance.</li>
+            <li>Design and implement process improvements with leadership; provide insights from KPI dashboards.</li>
+            <li>Support pricing reviews, complex contract renewals, and account optimization with cross-functional teams.</li>
+            <li>Monitor market and competitor activities to assess risks and growth opportunities.</li>
+          </ul>
+        </article>
+
+        <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
+          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+            <div>
+              <h3 class="text-xl font-bold">Senior Customer Service & Operations Support Specialist</h3>
+              <p class="text-brand-700 font-semibold">Emdad Alkhebrat – ELM Company</p>
+              <p class="text-gray-600">Aug 2017 — Jul 2018 · Dammam, Saudi Arabia</p>
+            </div>
+            <span class="rounded-full bg-accent-100 text-accent-800 px-3 py-1.5 text-xs font-semibold">Service Ops · Client Care</span>
+          </div>
+          <ul class="list-disc pl-6 space-y-2 text-gray-800">
+            <li>Analyzed and tracked passenger processing times from arrival to departure; reported on KPIs.</li>
+            <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
+            <li>Monitored operations across arrival/departure areas to optimize coordination and the passenger journey.</li>
+            <li>Generated accurate data reports to support decision-making and operational efficiency.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="mt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Education</h2>
+        <div class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
+          <h3 class="text-lg font-bold">Bachelor's Degree in Information Technology</h3>
+          <p class="text-brand-700 font-semibold">Saudi Electronic University · 2018 — 2022</p>
+          <ul class="list-disc pl-6 text-gray-800 space-y-1.5 mt-2">
+            <li>Database Management & Systems Design</li>
+            <li>Business Information Systems & ERP</li>
+            <li>Data Analysis & Business Intelligence</li>
+            <li>Network Administration & Security</li>
+            <li>Project Management & System Implementation</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="mt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Certifications & Awards</h2>
+        <div class="grid gap-5 md:grid-cols-2">
+          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
+            <div class="font-semibold text-lg text-gray-900">Microsoft Power BI Data Analyst Professional (MS-Power-BI)</div>
+            <div class="text-sm text-gray-600 mt-1">Umm Al Qura University — Jan 2025</div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
+            <div class="font-semibold text-lg text-gray-900">CompTIA Security+</div>
+            <div class="text-sm text-gray-600 mt-1">Ministry of Communications & IT / Al Khaleej Training — May 2023</div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
+            <div class="font-semibold text-lg text-gray-900">IT Specialist</div>
+            <div class="text-sm text-gray-600 mt-1">Saudi Council of Engineers</div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
+            <div class="font-semibold text-lg text-gray-900">“Best Great Strategy Game of Business 2021”</div>
+            <div class="text-sm text-gray-600 mt-1">Tiger Offshore Company (Financial process innovation)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="mt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Projects</h2>
+        <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <h3 class="text-lg font-bold">CabShare — Android App (Team Leader)</h3>
+              <p class="text-gray-700">Ride-sharing · Database Management · Communication System</p>
+            </div>
+            <span class="rounded-full bg-purple-100 text-purple-800 px-3 py-1 text-xs font-semibold">Leadership</span>
+          </div>
+          <p class="text-gray-800">Led an Android app enabling commuters to share rides. Built real-time trip matching, departure station tracking, and communication between drivers and riders.</p>
+        </article>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="mt-10 mb-14">
+        <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-2xl p-1">
+          <div class="bg-blue-50/80 rounded-2xl p-6 sm:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Let's connect</h2>
+            <div class="flex flex-wrap gap-3">
+              <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 font-semibold shadow-glow transition">✉️ Email Me</a>
+              <a href="https://www.linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-5 py-2.5 font-semibold transition">💼 LinkedIn</a>
+              <button id="copyEmail" class="inline-flex items-center rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 font-semibold transition">📋 Copy email</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mx-auto px-4 sm:px-6 lg:px-8 pb-10 text-gray-600">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© <span id="year"></span> Mohammed Al Subaie. All rights reserved.</p>
+        <div class="text-sm">Professional · Clean · Easy to share</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== PRINT-ONLY ATS RESUME ===== -->
+  <div id="resume-ats" class="print-only">
+    <main>
+      <section>
+        <h1 style="font-size:24px; font-weight:800; margin:0;">Mohammed Al Subaie</h1>
+        <div style="font-size:14px; margin-top:4px;">
+          Al Khobar, Saudi Arabia · Email: mo.subaie@gmail.com · LinkedIn: linkedin.com/in/mohammed-al-subaie-28159089
+        </div>
+      </section>
+
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Professional Summary</h2>
+        <p style="font-size:12.5px; margin:0;">
+          Sales Operations & Account Management specialist with 7+ years of experience in CRM/ERP administration (Microsoft Dynamics GP, Citrix),
+          forecasting, revenue booking, and data-driven performance analysis. Proven at streamlining processes, improving client satisfaction,
+          and supporting revenue growth across KSA & UAE.
         </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 font-semibold shadow-glow transition">✉️ Email Me</a>
-          <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-4 py-2.5 font-semibold transition">💼 LinkedIn</a>
-          <a href="#projects" class="inline-flex items-center rounded-xl bg-white hover:bg-gray-50 text-gray-700 px-4 py-2.5 font-semibold border border-gray-300 transition">🚀 View Projects</a>
-        </div>
+      </section>
 
-        <div class="mt-6 flex flex-wrap items-center gap-2.5">
-          <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Sales Operations</span>
-          <span class="rounded-full bg-accent-100 text-accent-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Key Account Management</span>
-          <span class="rounded-full bg-purple-100 text-purple-800 px-3 py-1.5 text-xs sm:text-sm font-medium">CRM & ERP</span>
-          <span class="rounded-full bg-orange-100 text-orange-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Business Analysis</span>
-          <span class="rounded-full bg-blue-100 text-blue-800 px-3 py-1.5 text-xs sm:text-sm font-medium">Process Optimization</span>
-        </div>
-      </div>
-    </section>
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Core Skills</h2>
+        <p style="font-size:12.5px; margin:0;">
+          Sales Operations; Key Account Management; CRM/ERP (Microsoft Dynamics GP, Citrix); Forecasting & Revenue Booking; KPI Dashboards & BI;
+          Process Optimization; Cross-functional Collaboration; Advanced Excel; Power BI; Data Integrity & Training; SOPs & Governance.
+        </p>
+      </section>
 
-    <!-- Skills -->
-    <section id="skills" class="mt-12">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Core Skills</h2>
-        <div class="flex flex-wrap gap-2">
-          <button data-filter="all" class="filter-btn active rounded-full bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 text-xs sm:text-sm font-medium transition">All</button>
-          <button data-filter="ops" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Operations</button>
-          <button data-filter="accounts" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Accounts</button>
-          <button data-filter="systems" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Systems</button>
-          <button data-filter="analysis" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Analysis</button>
-          <button data-filter="tools" class="filter-btn rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 text-xs sm:text-sm font-medium transition">Tools</button>
-        </div>
-      </div>
-      <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="ops">
-          <div class="font-bold text-xl mb-3 text-gray-900">Sales Operations</div>
-          <ul class="text-gray-600 space-y-2"><li>• Order management and processing</li><li>• Asset tracking and inventory control</li><li>• Revenue booking and forecasting</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="accounts">
-          <div class="font-bold text-xl mb-3 text-gray-900">Key Account Management</div>
-          <ul class="text-gray-600 space-y-2"><li>• Multinational client relationship management</li><li>• Customer retention and satisfaction</li><li>• Upselling and cross-selling strategies</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
-          <div class="font-bold text-xl mb-3 text-gray-900">CRM & ERP Administration</div>
-          <ul class="text-gray-600 space-y-2"><li>• Microsoft Dynamics GP implementation</li><li>• Citrix system administration</li><li>• Data integrity and user training</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="analysis">
-          <div class="font-bold text-xl mb-3 text-gray-900">Business & Data Analysis</div>
-          <ul class="text-gray-600 space-y-2"><li>• Performance reporting and dashboards</li><li>• Data-driven insights and recommendations</li><li>• Business intelligence and forecasting</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="analysis">
-          <div class="font-bold text-xl mb-3 text-gray-900">Data Reporting</div>
-          <ul class="text-gray-600 space-y-2"><li>• Performance dashboard creation</li><li>• Status tracking and monitoring</li><li>• Automated reporting systems</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="tools">
-          <div class="font-bold text-xl mb-3 text-gray-900">Process Optimization</div>
-          <ul class="text-gray-600 space-y-2"><li>• Cross-functional team collaboration</li><li>• Workflow streamlining and efficiency</li><li>• Standard operating procedures</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="tools">
-          <div class="font-bold text-xl mb-3 text-gray-900">Excel (Advanced)</div>
-          <ul class="text-gray-600 space-y-2"><li>• Pivot tables and complex formulas</li><li>• Data analysis and visualization</li><li>• Process automation with macros</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
-          <div class="font-bold text-xl mb-3 text-gray-900">Microsoft Dynamics GP</div>
-          <ul class="text-gray-600 space-y-2"><li>• Financial module management</li><li>• Operations and inventory control</li><li>• Multi-region implementation</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="systems">
-          <div class="font-bold text-xl mb-3 text-gray-900">Citrix</div>
-          <ul class="text-gray-600 space-y-2"><li>• Remote access administration</li><li>• User management and permissions</li><li>• System maintenance and support</li></ul>
-        </div>
-        <div class="skill-card bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200 hover:shadow-soft transition-shadow" data-cat="accounts">
-          <div class="font-bold text-xl mb-3 text-gray-900">Customer Success</div>
-          <ul class="text-gray-600 space-y-2"><li>• Client satisfaction measurement</li><li>• Retention strategy development</li><li>• Feedback loop implementation</li></ul>
-        </div>
-      </div>
-    </section>
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Experience</h2>
 
-    <!-- Experience -->
-    <section id="experience" class="mt-12">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Experience</h2>
-      <div class="grid gap-6">
-        <!-- Role 1 -->
-        <article class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">Senior Key Accounts Management & Sales Operations Analyst</h3>
-              <p class="text-base text-brand-600 font-semibold">Petroleum & Energy Logistics and Services Co.</p>
-              <p class="text-gray-500 font-medium">Jul 2018 — Present · Dhahran, Saudi Arabia</p>
-            </div>
-            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-semibold">Accounts · Sales Ops · ERP</span>
-          </div>
-          <ul class="list-disc pl-6 space-y-2.5 text-gray-700 leading-relaxed">
-            <li>Develop and maintain strong relationships with key accounts, ensuring client needs are met and service delivery exceeds expectations.</li>
-            <li>Act as the primary liaison between clients and internal teams, facilitating clear communication and swift issue resolution.</li>
-            <li>Lead sales operations processes, including forecasting, reporting, and pipeline tracking to support strategic decisions.</li>
-            <li>Analyze sales and performance data to identify trends, uncover opportunities, and recommend process improvements.</li>
-            <li>Oversee and maintain dual ERP systems (Citrix and Microsoft Dynamics GP), managing sales entries, asset tracking, and revenue booking to ensure accurate reporting, compliance, and seamless operational flow across regions.</li>
-            <li>Collaborate with management to design and implement process improvements that enhance operational efficiency and customer satisfaction.</li>
-            <li>Provide insights and recommendations to senior leadership based on in-depth analysis of sales metrics and operational data.</li>
-            <li>Support pricing strategy reviews, complex contract renewals, and account optimization in coordination with leadership.</li>
-            <li>Monitor market developments and competitor activities to identify risks and growth opportunities.</li>
-            <li>Coordinate with cross-functional teams, including finance, logistics, and IT, to ensure smooth execution of account plans and business objectives.</li>
-          </ul>
-        </article>
-
-        <!-- Role 2 -->
-        <article class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">Senior Customer Service & Operations Support Specialist</h3>
-              <p class="text-base text-brand-600 font-semibold">Emdad Alkhebrat – ELM Company</p>
-              <p class="text-gray-500 font-medium">Aug 2017 — Jul 2018 · Dammam, Saudi Arabia</p>
-            </div>
-            <span class="rounded-full bg-accent-100 text-accent-800 px-3 py-1.5 text-xs sm:text-sm font-semibold">Service Ops · Client Care</span>
-          </div>
-          <ul class="list-disc pl-6 space-y-2.5 text-gray-700 leading-relaxed">
-            <li>Analyzed and tracked passenger processing times data from arrival to departure.</li>
-            <li>Monitored key performance indicators related to passenger flow and service efficiency.</li>
-            <li>Prepared detailed reports to aid in performance evaluation and process improvement.</li>
-            <li>Utilized data insights by monitoring operations in arrival and departure area to maintain coordination and optimize the passenger experience.</li>
-            <li>Generated accurate data reports to support decision-making and enhance operational efficiency across key service areas.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="mt-12">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Education</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Bachelor's Degree in Information Technology</h3>
-          <p class="text-brand-600 font-semibold mb-4">Saudi Electronic University · 2018 — 2022</p>
-          <ul class="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Database Management and Systems Design</li>
-            <li>Business Information Systems and ERP</li>
-            <li>Data Analysis and Business Intelligence</li>
-            <li>Network Administration and Security</li>
-            <li>Project Management and System Implementation</li>
+        <div style="margin-top:6px;">
+          <div style="font-weight:700; font-size:13.5px;">Senior Key Accounts Management & Sales Operations Analyst</div>
+          <div style="font-size:12.5px;">Petroleum & Energy Logistics and Services Co. — Jul 2018 – Present · Dhahran, Saudi Arabia</div>
+          <ul style="margin:6px 0 0 18px; font-size:12.5px;">
+            <li>Led sales operations (forecasting, reporting, pipeline tracking) and served as primary liaison for key accounts.</li>
+            <li>Analyzed sales/performance data to identify trends, risks, and opportunities; delivered actionable insights to leadership.</li>
+            <li>Oversaw dual ERP systems (Citrix & Microsoft Dynamics GP): sales entries, asset tracking, revenue booking, compliance.</li>
+            <li>Standardized processes and SOPs across regions; improved operational efficiency and client satisfaction.</li>
+            <li>Supported pricing reviews, contract renewals, and account optimization with finance, logistics, and IT.</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- Certifications & Awards (separate section) -->
-    <section id="certifications" class="mt-12">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Certifications & Awards</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
-          <div class="font-semibold text-lg text-gray-900">Microsoft Power BI Data Analyst Professional (MS-Power-BI)</div>
-          <div class="text-sm text-gray-600 mt-1">Umm Al Qura University — Jan 2025</div>
+        <div style="margin-top:8px;">
+          <div style="font-weight:700; font-size:13.5px;">Senior Customer Service & Operations Support Specialist</div>
+          <div style="font-size:12.5px;">Emdad Alkhebrat – ELM Company — Aug 2017 – Jul 2018 · Dammam, Saudi Arabia</div>
+          <ul style="margin:6px 0 0 18px; font-size:12.5px;">
+            <li>Analyzed and tracked passenger processing times; built KPI reports for service efficiency.</li>
+            <li>Monitored operations across arrival/departure areas to optimize coordination and passenger experience.</li>
+            <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
+          </ul>
         </div>
-        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
-          <div class="font-semibold text-lg text-gray-900">CompTIA Security+</div>
-          <div class="text-sm text-gray-600 mt-1">Ministry of Communications & IT / Al Khaleej Training — May 2023</div>
+      </section>
+
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Education</h2>
+        <div style="font-size:12.5px;">
+          <div style="font-weight:700;">Bachelor's Degree in Information Technology</div>
+          Saudi Electronic University — 2018 – 2022
         </div>
-        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
-          <div class="font-semibold text-lg text-gray-900">IT Specialist</div>
-          <div class="text-sm text-gray-600 mt-1">Saudi Council of Engineers</div>
+      </section>
+
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Certifications & Awards</h2>
+        <ul style="margin:6px 0 0 18px; font-size:12.5px;">
+          <li>Microsoft Power BI Data Analyst Professional — Umm Al Qura University (Jan 2025)</li>
+          <li>CompTIA Security+ — Ministry of Communications & IT / Al Khaleej Training (May 2023)</li>
+          <li>IT Specialist — Saudi Council of Engineers</li>
+          <li>“Best Great Strategy Game of Business 2021” — Tiger Offshore Company (Financial process innovation)</li>
+        </ul>
+      </section>
+
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Projects</h2>
+        <div style="font-size:12.5px;">
+          <span style="font-weight:700;">CabShare — Android App (Team Leader):</span>
+          Real-time trip matching, departure station tracking, and driver–rider communication for sustainable commuting.
         </div>
-        <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5 hover:shadow-soft transition">
-          <div class="font-semibold text-lg text-gray-900">“Best Great Strategy Game of Business 2021”</div>
-          <div class="text-sm text-gray-600 mt-1">Tiger Offshore Company (Financial process innovation)</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Achievements -->
-    <section id="achievements" class="mt-12">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Achievements</h2>
-        <div class="text-gray-600 font-medium">Key Highlights</div>
-      </div>
+      <section style="margin-top:12px;">
+        <h2 style="font-size:16px; font-weight:700; border-bottom:1px solid #111; padding-bottom:3px; margin:0 0 6px;">Selected Achievements</h2>
+        <ul style="margin:6px 0 0 18px; font-size:12.5px;">
+          <li>+64% operational productivity via sales cycle optimization.</li>
+          <li>+68% client satisfaction using structured complaint tracking.</li>
+          <li>ERP rollout and training across KSA & UAE, improving efficiency and reporting accuracy.</li>
+          <li>Revived previously uncertain sales, contributing to improved revenue stability.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-3xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">+64%</div>
-          <p class="text-gray-700 font-semibold mb-3">Operational productivity through sales cycle optimization</p>
-          <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
-          <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">Streamlined steps and improved data handoffs to reduce delays.</div>
-        </div>
-
-        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-3xl font-bold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">+68%</div>
-          <p class="text-gray-700 font-semibold mb-3">Client satisfaction using structured complaint tracking</p>
-          <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
-          <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">Built a simple tracking loop to address issues faster and clearer.</div>
-        </div>
-
-        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">2 countries</div>
-          <p class="text-gray-700 font-semibold mb-3">ERP implementation across KSA & UAE</p>
-          <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
-          <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">Led rollout and training, improving efficiency and reporting accuracy.</div>
-        </div>
-
-        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">🏆 Award</div>
-          <p class="text-gray-700 font-semibold mb-3">“Best Great Strategy Game of Business 2021” — Tiger Offshore Company, USA</p>
-          <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
-          <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">
-            <p>Awarded for exceptional financial innovation, developing innovative invoicing techniques including the 7-milestone approach that enhanced cash flow and maximized financial efficiency.</p>
-          </div>
-        </div>
-
-        <div class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="text-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent mb-2">💰 Sales</div>
-          <p class="text-gray-700 font-semibold mb-3">Successfully revived previously uncertain sales</p>
-          <button class="toggle-details text-brand-600 hover:text-brand-700 font-semibold">Show details ↓</button>
-          <div class="details mt-3 hidden text-gray-600 bg-blue-100/50 rounded-lg p-4">
-            <p>Resolved previously uncertain sales situations, leading to improved revenue and greater financial stability for the organization.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="mt-12">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Projects</h2>
-        <div class="text-gray-600 font-medium">Selected work</div>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-2">
-        <article class="bg-blue-50/80 rounded-2xl p-6 shadow-card border border-blue-200 hover:shadow-soft transition-shadow">
-          <div class="flex items-start justify-between gap-4 mb-4">
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-1">CabShare — Android App (Team Leader)</h3>
-              <p class="text-gray-600 font-medium">Ride-sharing · Database Management · Communication System</p>
-            </div>
-            <span class="rounded-full bg-purple-100 text-purple-800 px-3 py-1 text-sm font-semibold">Leadership</span>
-          </div>
-          <p class="text-gray-700 leading-relaxed mb-4">Led the development of an Android application that enables commuters to share rides in their city for faster, affordable, and eco-friendly transportation. Built optimal communication between drivers and users with departure station information, trip offers, and scheduling features.</p>
-          <div class="text-gray-700 mb-3">
-            <p><strong>Key Features:</strong> Database integration for user and driver data storage, real-time trip matching, departure station tracking, and sustainable commuting solutions.</p>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <a href="#" class="rounded-lg bg-brand-50 text-brand-700 hover:bg-brand-100 px-4 py-2 text-sm font-semibold transition">View Overview</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="mt-12 mb-16">
-      <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-2xl p-1">
-        <div class="bg-blue-50/80 rounded-2xl p-6 sm:p-8 lg:p-12">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Let's connect</h2>
-          <div class="flex flex-wrap gap-4">
-            <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 font-semibold shadow-glow transition">✉️ Email Me</a>
-            <a href="https://www.linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="inline-flex items-center rounded-xl bg-[#0A66C2] hover:bg-[#0857a3] text-white px-6 py-3 font-semibold transition">💼 LinkedIn</a>
-            <button id="copyEmail" class="inline-flex items-center rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 font-semibold transition">📋 Copy email</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="mx-auto px-4 sm:px-6 lg:px-8 pb-10 text-gray-600">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p>© <span id="year"></span> Mohammed Al Subaie. All rights reserved.</p>
-      <div class="text-sm">Professional · Clean · Easy to share</div>
-    </div>
-  </footer>
-
-  <!-- Toast -->
-  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
+  <!-- Small toast (screen) -->
+  <div id="toast" class="screen-only fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
     <div class="rounded-xl bg-gray-900 text-white px-4 py-3 shadow-glow text-center">Done ✅</div>
   </div>
 
-  <!-- Back to top -->
-  <button id="backToTop" class="fixed bottom-5 right-5 hidden h-10 w-10 rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-glow" aria-label="Back to top">↑</button>
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Mohammed Al Subaie",
-    "jobTitle":"Sales Operations & Account Management Specialist",
-    "email":"mo.subaie@gmail.com",
-    "address": {"@type":"PostalAddress","addressLocality":"Al Khobar","addressCountry":"Saudi Arabia"},
-    "sameAs":["https://www.linkedin.com/in/mohammed-al-subaie-28159089"]
-  }
-  </script>
-
-  <!-- Interactions -->
   <script>
-    // Toast
+    // Toast helper
     function showToast(message) {
       const toast = document.getElementById('toast');
       if (!toast) return;
       toast.firstElementChild.textContent = message;
       toast.classList.remove('hidden');
       clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => toast.classList.add('hidden'), 1600);
+      window.__toastTimer = setTimeout(() => toast.classList.add('hidden'), 1400);
     }
 
     // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    // Smooth scroll (screen)
+    document.querySelectorAll('.screen-only a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         const id = link.getAttribute('href');
         if (id && id.length > 1) {
@@ -450,82 +401,29 @@
       menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     }
 
-    // Back to top
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-      window.addEventListener('scroll', () => {
-        backToTopBtn.classList.toggle('hidden', window.pageYOffset <= 500);
-      });
-      backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    }
-
-    // Details toggles
-    document.querySelectorAll('.toggle-details').forEach(button => {
-      button.addEventListener('click', () => {
-        const details = button.nextElementSibling;
-        const isOpen = details && !details.classList.contains('hidden');
-        document.querySelectorAll('.details').forEach(p => p.classList.add('hidden'));
-        document.querySelectorAll('.toggle-details').forEach(b => b.textContent = 'Show details ↓');
-        if (details) {
-          if (isOpen) {
-            details.classList.add('hidden');
-            button.textContent = 'Show details ↓';
-          } else {
-            details.classList.remove('hidden');
-            button.textContent = 'Hide details ↑';
-          }
-        }
-      });
-    });
-
-    // Skills filter
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const skillCards = document.querySelectorAll('.skill-card');
-    filterButtons.forEach(btn => btn.addEventListener('click', () => {
-      filterButtons.forEach(b => { b.classList.remove('bg-brand-600','text-white'); b.classList.add('bg-gray-200','text-gray-700'); });
-      btn.classList.remove('bg-gray-200','text-gray-700');
-      btn.classList.add('bg-brand-600','text-white');
-      const val = btn.getAttribute('data-filter');
-      skillCards.forEach(card => {
-        const cat = card.getAttribute('data-cat');
-        card.style.display = (val === 'all' || cat === val) ? '' : 'none';
-      });
-    }));
-
     // Clipboard
     async function copyToClipboard(text) {
       try {
         await navigator.clipboard.writeText(text);
-        showToast('Copied ✅');
+        showToast('Link copied ✅');
       } catch (e) {
         const tmp = document.createElement('textarea');
         tmp.value = text; document.body.appendChild(tmp); tmp.select();
-        try { document.execCommand('copy'); showToast('Copied ✅'); } catch(_) { alert(text); }
+        try { document.execCommand('copy'); showToast('Link copied ✅'); } catch(_) { alert(text); }
         document.body.removeChild(tmp);
       }
     }
     const copyLinkBtn = document.getElementById('copyLink');
     if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => copyToClipboard(window.location.href));
-    const copyEmailBtn = document.getElementById('copyEmail');
-    if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard('mo.subaie@gmail.com'));
 
-    // Print (expand everything first)
-    function prepareAndPrintFullPage() {
-      document.querySelectorAll('.details').forEach(p => p.classList.remove('hidden'));
-      document.querySelectorAll('.toggle-details').forEach(b => b.textContent = 'Hide details ↑');
-      const allBtn = Array.from(document.querySelectorAll('.filter-btn')).find(b => b.getAttribute('data-filter') === 'all');
-      if (allBtn) allBtn.click();
-      window.print();
+    // Print to PDF: switch to browser print (ATS layout appears automatically)
+    const printBtn = document.getElementById('printBtn');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        showToast('Opening print…');
+        window.print();
+      });
     }
-    window.addEventListener('afterprint', () => {
-      document.querySelectorAll('.details').forEach(p => p.classList.add('hidden'));
-      document.querySelectorAll('.toggle-details').forEach(b => b.textContent = 'Show details ↓');
-    });
-    const downloadBtn = document.getElementById('downloadBtn');
-    if (downloadBtn) downloadBtn.addEventListener('click', () => {
-      showToast('Opening print dialog…');
-      prepareAndPrintFullPage();
-    });
   </script>
 </body>
 </html>

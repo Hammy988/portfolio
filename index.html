@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-75NDBBQHRD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-75NDBBQHRD');
-</script>
   <title>Mohammed Al Subaie — Portfolio</title>
   <meta name="description" content="Sales Operations & Account Management specialist with 7+ years of experience in CRM/ERP, data analysis, and process optimization." />
+
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75NDBBQHRD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-75NDBBQHRD', { anonymize_ip: true });
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -69,9 +70,9 @@
       .print-only { display: block !important; }
 
       :root {
-        --brand:#1E3A8A;   /* brand-800 */
-        --brand-soft:#DBEAFE; /* brand-100 */
-        --accent:#065F46;  /* accent-800 */
+        --brand:#1E3A8A;     /* brand-800 */
+        --brand-soft:#DBEAFE;/* brand-100 */
+        --accent:#065F46;    /* accent-800 */
       }
 
       body { font-size: 12.5px; line-height: 1.35; color:#111827; }
@@ -130,7 +131,7 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-  <!-- ========== SCREEN PORTFOLIO (unchanged) ========== -->
+  <!-- ========== SCREEN PORTFOLIO ========== -->
   <div class="screen-only">
     <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
     <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
@@ -204,6 +205,7 @@
 
     <!-- Main (screen) -->
     <main class="mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- About -->
       <section id="about" class="pt-10">
         <div class="max-w-5xl">
           <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">
@@ -218,6 +220,7 @@
         </div>
       </section>
 
+      <!-- Skills -->
       <section id="skills" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Core Skills</h2>
         <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -248,6 +251,7 @@
         </div>
       </section>
 
+      <!-- Experience -->
       <section id="experience" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Experience</h2>
 
@@ -289,6 +293,7 @@
         </article>
       </section>
 
+      <!-- Education -->
       <section id="education" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Education</h2>
         <div class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
@@ -304,6 +309,7 @@
         </div>
       </section>
 
+      <!-- Certifications -->
       <section id="certifications" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Certifications & Awards</h2>
         <div class="grid gap-5 md:grid-cols-2">
@@ -326,6 +332,7 @@
         </div>
       </section>
 
+      <!-- Projects -->
       <section id="projects" class="mt-10">
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Projects</h2>
         <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
@@ -340,6 +347,7 @@
         </article>
       </section>
 
+      <!-- Contact -->
       <section id="contact" class="mt-10 mb-14">
         <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-2xl p-1">
           <div class="bg-blue-50/80 rounded-2xl p-6 sm:p-8">
@@ -473,7 +481,7 @@
     </section>
   </div>
 
-  <!-- Toast (screen) -->
+  <!-- Toast -->
   <div id="toast" class="screen-only fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
     <div class="rounded-xl bg-gray-900 text-white px-4 py-3 shadow-glow text-center">Done ✅</div>
   </div>
@@ -520,24 +528,39 @@
     async function copyToClipboard(text) {
       try {
         await navigator.clipboard.writeText(text);
-        showToast('Link copied ✅');
+        showToast('Copied ✅');
       } catch (e) {
         const tmp = document.createElement('textarea');
         tmp.value = text; document.body.appendChild(tmp); tmp.select();
-        try { document.execCommand('copy'); showToast('Link copied ✅'); } catch(_) { alert(text); }
+        try { document.execCommand('copy'); showToast('Copied ✅'); } catch(_) { alert(text); }
         document.body.removeChild(tmp);
       }
     }
     const copyLinkBtn = document.getElementById('copyLink');
-    if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => copyToClipboard(window.location.href));
-    const copyEmailBtn = document.getElementById('copyEmail');
-    if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard('mo.subaie@gmail.com'));
+    if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => {
+      copyToClipboard(window.location.href);
+      if (typeof gtag === 'function') gtag('event', 'copy_link_clicked', { location: 'header' });
+    });
 
-    // Print to PDF (ATS layout used via CSS @media print)
+    const copyEmailBtn = document.getElementById('copyEmail');
+    if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => {
+      copyToClipboard('mo.subaie@gmail.com');
+      if (typeof gtag === 'function') gtag('event', 'email_copied', { area: 'contact' });
+    });
+
+    // LinkedIn icon clicks (header + contact)
+    document.querySelectorAll('a[aria-label="LinkedIn"]').forEach(a => {
+      a.addEventListener('click', () => {
+        if (typeof gtag === 'function') gtag('event', 'linkedin_click', { area: 'icon' });
+      });
+    });
+
+    // Print to PDF (ATS layout is handled by CSS @media print)
     const printBtn = document.getElementById('printBtn');
     if (printBtn) {
       printBtn.addEventListener('click', () => {
         showToast('Opening print…');
+        if (typeof gtag === 'function') gtag('event', 'print_clicked', { layout: 'ATS_print' });
         window.print();
       });
     }

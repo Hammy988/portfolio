@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohammed Al Subaie — Portfolio</title>
-  <meta name="description" content="Sales Operations & Account Management specialist with 7+ years of experience in CRM/ERP, data analysis, and process optimization." />
+  <meta name="description" content="Sales Ops, Key Accounts, and Business/Performance Analysis with 7+ years across CRM/ERP, data analytics, and process optimization." />
 
   <!-- Google tag (gtag.js) - GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-75NDBBQHRD"></script>
@@ -47,7 +47,7 @@
     .brand-name { font-weight:800; line-height:1.1; }
     .brand-title { font-size:.9rem; color:#4b5563; }
 
-    /* Square icon buttons (screen) */
+    /* Icon buttons */
     .icon-btn {
       width:40px; height:40px; border-radius:.6rem; display:inline-grid; place-items:center;
       background:#eef2ff; color:#1e40af; border:1px solid #dbeafe; box-shadow:0 1px 1px rgba(0,0,0,.03);
@@ -62,44 +62,25 @@
     }
     .brand-linkedin:hover { filter:brightness(.95); }
 
-    /* PRINT: ATS resume (color-accented, single column) */
+    /* PRINT: ATS resume (single column) */
     @media print {
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       html, body { background: #ffffff !important; }
       .screen-only { display: none !important; }
       .print-only { display: block !important; }
 
-      :root {
-        --brand:#1E3A8A;     /* brand-800 */
-        --brand-soft:#DBEAFE;/* brand-100 */
-        --accent:#065F46;    /* accent-800 */
-      }
+      :root { --brand:#1E3A8A; --brand-soft:#DBEAFE; --accent:#065F46; }
 
       body { font-size: 12.5px; line-height: 1.35; color:#111827; }
       #ats { max-width: 210mm; margin: 0 auto; }
 
-      .ats-header {
-        border-bottom: 2px solid var(--brand);
-        padding-bottom: 8px;
-        margin-bottom: 10px;
-      }
+      .ats-header { border-bottom: 2px solid var(--brand); padding-bottom: 8px; margin-bottom: 10px; }
       .ats-name { font-size: 24px; font-weight: 800; color: var(--brand); margin:0; }
       .ats-meta { margin-top: 4px; color:#1f2937; display:flex; flex-wrap:wrap; gap:8px; }
-      .meta-chip {
-        background: var(--brand-soft);
-        color: var(--brand);
-        padding: 3px 8px;
-        border-radius: 999px;
-        font-weight: 600;
-        border: 1px solid #bfdbfe;
-      }
+      .meta-chip { background: var(--brand-soft); color: var(--brand); padding: 3px 8px; border-radius: 999px; font-weight: 600; border: 1px solid #bfdbfe; }
 
       .ats-section { margin-top: 12px; }
-      .ats-title {
-        font-size: 15px; font-weight: 800; color: var(--brand);
-        border-bottom: 1px solid #c7d2fe; padding-bottom: 4px; margin: 0 0 6px;
-      }
-
+      .ats-title { font-size: 15px; font-weight: 800; color: var(--brand); border-bottom: 1px solid #c7d2fe; padding-bottom: 4px; margin: 0 0 6px; }
       .ats-role { margin-top: 6px; break-inside: avoid; }
       .ats-role h3 { font-size: 13.5px; font-weight: 800; color:#111827; margin:0; }
       .ats-role .company { font-size: 12.5px; color:#1f2937; margin-top:2px; }
@@ -108,12 +89,9 @@
       .ats-role li { margin: 3px 0; }
 
       .ats-badges { display:flex; gap:6px; flex-wrap:wrap; margin-top: 6px; }
-      .badge {
-        border:1px solid #cbd5e1; background:#f8fafc; color:#0f172a;
-        padding:2px 8px; border-radius:999px; font-weight:700; font-size:12px;
-      }
+      .badge { border:1px solid #cbd5e1; background:#f8fafc; color:#0f172a; padding:2px 8px; border-radius:999px; font-weight:700; font-size:12px; }
       .badge-positive { border-color:#86efac; background:#ecfdf5; color:#065f46; }
-      .badge-info     { border-color:#93c5fd; background:#eff6ff; color:#1e3a8a; }
+      .badge-info { border-color:#93c5fd; background:#eff6ff; color:#1e3a8a; }
 
       .ats-list { margin: 6px 0 0 18px; }
       .ats-list li { margin: 3px 0; }
@@ -125,7 +103,6 @@
       .pb-always { page-break-before: always; }
       @page { margin: 10mm; }
     }
-
     .print-only { display:none; } /* hide ATS on screen */
   </style>
 </head>
@@ -144,7 +121,7 @@
             <span class="brand-logo shadow-glow text-base">MS</span>
             <div>
               <div class="brand-name group-hover:text-brand-600 transition-colors text-[1.05rem]">Mohammed Al Subaie</div>
-              <div class="brand-title">Sales Operations &amp; Account Management Specialist</div>
+              <div class="brand-title">Sales Ops Analyst · Key Account Manager · Performance/Business Analyst</div>
             </div>
           </a>
 
@@ -210,12 +187,16 @@
         <div class="max-w-5xl">
           <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">
             📍 Al Khobar, Saudi Arabia · ✉️ mo.subaie@gmail.com
+            <button onclick="window.print()" class="ml-2 underline font-semibold">Print ATS Résumé</button>
           </div>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
             Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Mohammed Al Subaie</span>
           </h1>
           <p class="mt-4 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl">
-            Senior specialist in Sales Operations, Key Account Management, CRM/ERP administration, and data-driven business analysis. I streamline processes, lift client satisfaction, and support revenue growth with clean ops and actionable dashboards.
+            Versatile professional with 7+ years spanning sales operations, key account management, and performance/business analysis.
+            I leverage Power BI, advanced Excel, KPI frameworks, and CRM/ERP (Microsoft Dynamics GP, Citrix) to drive decisions,
+            streamline processes, and support revenue growth. I build long-term client partnerships, negotiate win–win contracts,
+            and deliver executive-ready reporting and automation that improve efficiency and visibility across teams.
           </p>
         </div>
       </section>
@@ -226,19 +207,19 @@
         <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
             <div class="font-bold text-lg mb-2">Sales Operations</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Order management & processing</li><li>Asset tracking & inventory control</li><li>Revenue booking & forecasting</li></ul>
+            <ul class="text-gray-700 space-y-1.5"><li>Order management & processing</li><li>Asset tracking & inventory control</li><li>Revenue booking, S&OP support & forecasting</li></ul>
           </div>
           <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
             <div class="font-bold text-lg mb-2">Key Account Management</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Multinational client relationships</li><li>Retention & satisfaction</li><li>Upsell & cross-sell strategies</li></ul>
+            <ul class="text-gray-700 space-y-1.5"><li>Multinational relationships & retention</li><li>Upsell/cross-sell strategies</li><li>Escalation handling & SLAs</li></ul>
           </div>
           <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
             <div class="font-bold text-lg mb-2">CRM & ERP Administration</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Microsoft Dynamics GP</li><li>Citrix administration</li><li>Data integrity & training</li></ul>
+            <ul class="text-gray-700 space-y-1.5"><li>Microsoft Dynamics GP</li><li>Citrix administration</li><li>Data integrity, testing & training</li></ul>
           </div>
           <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
             <div class="font-bold text-lg mb-2">Business & Data Analysis</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Performance dashboards</li><li>BI & forecasting</li><li>Insights & recommendations</li></ul>
+            <ul class="text-gray-700 space-y-1.5"><li>Performance dashboards</li><li>BI & forecasting; SQL basics</li><li>KPI frameworks & recommendations</li></ul>
           </div>
           <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
             <div class="font-bold text-lg mb-2">Process Optimization</div>
@@ -246,7 +227,7 @@
           </div>
           <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
             <div class="font-bold text-lg mb-2">Tools</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Excel (advanced)</li><li>Power BI</li><li>ERP/CRM reporting</li></ul>
+            <ul class="text-gray-700 space-y-1.5"><li>Excel (advanced)</li><li>Power BI</li><li>Dynamics GP · Citrix</li></ul>
           </div>
         </div>
       </section>
@@ -265,13 +246,13 @@
             <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs font-semibold">Accounts · Sales Ops · ERP</span>
           </div>
           <ul class="list-disc pl-6 space-y-2 text-gray-800">
-            <li>Develop and maintain strong relationships with key accounts; act as primary liaison to ensure service excellence.</li>
-            <li>Lead sales operations processes: forecasting, reporting, and pipeline tracking to support strategic decisions.</li>
-            <li>Analyze sales/performance data to identify trends, opportunities, and process improvements.</li>
-            <li>Oversee dual ERP systems (Citrix & Microsoft Dynamics GP): sales entries, asset tracking, revenue booking, compliance.</li>
-            <li>Design and implement process improvements with leadership; provide insights from KPI dashboards.</li>
-            <li>Support pricing reviews, contract renewals, and account optimization with cross-functional teams.</li>
-            <li>Monitor market and competitor activities to assess risks and growth opportunities.</li>
+            <li>Manage multinational key accounts ensuring satisfaction, retention, and strategic growth.</li>
+            <li>Analyze sales & operational data; deliver KPI dashboards and insights in Power BI for leaders.</li>
+            <li>Oversee CRM data integrity and forecasting cadence; improve reporting accuracy and timeliness.</li>
+            <li>Optimize ERP workflows (Dynamics GP, Citrix); automate reports and streamline documentation.</li>
+            <li>Negotiate contracts and renewals; coordinate pricing and service scope with cross-functional teams.</li>
+            <li>Lead process improvements that shorten reporting cycles and reduce manual work.</li>
+            <li>Partner with Finance/Logistics/IT to resolve issues quickly and elevate customer experience.</li>
           </ul>
         </article>
 
@@ -287,7 +268,7 @@
           <ul class="list-disc pl-6 space-y-2 text-gray-800">
             <li>Analyzed and tracked passenger processing times from arrival to departure; reported on KPIs.</li>
             <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
-            <li>Monitored operations across arrival/departure areas to optimize coordination and the passenger journey.</li>
+            <li>Monitored operations across arrival/departure areas to optimize coordination and passenger journey.</li>
             <li>Generated accurate data reports to support decision-making and operational efficiency.</li>
           </ul>
         </article>
@@ -300,10 +281,8 @@
           <h3 class="text-lg font-bold">Bachelor's Degree in Information Technology</h3>
           <p class="text-brand-700 font-semibold">Saudi Electronic University · 2018 — 2022</p>
           <ul class="list-disc pl-6 text-gray-800 space-y-1.5 mt-2">
-            <li>Database Management & Systems Design</li>
-            <li>Business Information Systems & ERP</li>
-            <li>Data Analysis & Business Intelligence</li>
-            <li>Network Administration & Security</li>
+            <li>Database Management & Systems Design · Business Information Systems & ERP</li>
+            <li>Data Analysis & Business Intelligence · Network Administration & Security</li>
             <li>Project Management & System Implementation</li>
           </ul>
         </div>
@@ -314,7 +293,7 @@
         <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Certifications & Awards</h2>
         <div class="grid gap-5 md:grid-cols-2">
           <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
-            <div class="font-semibold text-lg text-gray-900">Microsoft Power BI Data Analyst Professional (MS-Power-BI)</div>
+            <div class="font-semibold text-lg text-gray-900">Microsoft Power BI Data Analyst Professional</div>
             <div class="text-sm text-gray-600 mt-1">Umm Al Qura University — Jan 2025</div>
           </div>
           <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
@@ -379,7 +358,7 @@
     </footer>
   </div>
 
-  <!-- ========== PRINT-ONLY ATS RESUME (full, colorful, single-column) ========== -->
+  <!-- ========== PRINT-ONLY ATS RESUME (single column) ========== -->
   <div id="ats" class="print-only">
     <section class="ats-header pb-avoid">
       <h1 class="ats-name">Mohammed Al Subaie</h1>
@@ -398,21 +377,22 @@
     <section class="ats-section pb-avoid">
       <h2 class="ats-title">Professional Summary</h2>
       <p class="ats-soft">
-        Sales Operations &amp; Account Management specialist with 7+ years in CRM/ERP administration (Microsoft Dynamics GP, Citrix),
-        forecasting, revenue booking, and performance analytics. Known for streamlining processes, improving client satisfaction,
-        and supporting revenue growth across KSA &amp; UAE with clear SOPs and actionable dashboards.
+        Versatile Sales Operations Analyst, Key Account Manager, and Performance/Business Analyst with 7+ years of experience across data analytics,
+        client relationship management, and enterprise systems. Proficient in Power BI, advanced Excel, KPI frameworks, CRM/ERP (Microsoft Dynamics GP, Citrix),
+        and reporting automation. Drive revenue growth, operational efficiency, and on-time ERP implementations while aligning business strategy with technology.
+        Known for executive-ready dashboards, process improvements, and cross-functional collaboration.
       </p>
     </section>
 
     <section class="ats-section pb-avoid">
       <h2 class="ats-title">Core Skills</h2>
       <ul class="ats-list">
-        <li>Sales Operations; Order Mgmt; Asset Tracking; Revenue Booking &amp; Forecasting</li>
-        <li>Key Account Management; Retention &amp; Upsell/Cross-sell; Client Escalation Handling</li>
-        <li>CRM/ERP: Microsoft Dynamics GP, Citrix; Data Integrity; User Training</li>
-        <li>KPI Dashboards; BI &amp; Forecasting; Insights &amp; Recommendations</li>
-        <li>Process Optimization; SOPs; Cross-functional Collaboration (Finance, Logistics, IT)</li>
-        <li>Excel (Advanced), Power BI; Reporting Automation</li>
+        <li>Data Analysis &amp; Visualization; KPI Frameworks; Performance Reporting (Power BI, Excel)</li>
+        <li>Sales Operations; Forecasting; Pipeline &amp; Revenue Reporting; CRM Data Integrity</li>
+        <li>Key Account Management; Retention; Contract Negotiation; Client Escalation Handling</li>
+        <li>ERP (Microsoft Dynamics GP, Citrix); Process Automation; Testing &amp; Training</li>
+        <li>Business Process Improvement; SOPs; Cross-functional Collaboration (Sales, Finance, Logistics, IT)</li>
+        <li>System Integration Support; Stakeholder Communication; Executive Dashboards</li>
       </ul>
     </section>
 
@@ -423,13 +403,13 @@
         <h3>Senior Key Accounts Management &amp; Sales Operations Analyst</h3>
         <div class="company">Petroleum &amp; Energy Logistics and Services Co. — <span class="location">Jul 2018 – Present · Dhahran, Saudi Arabia</span></div>
         <ul>
-          <li>Develop and maintain strong relationships with key accounts; act as primary liaison to ensure service excellence.</li>
-          <li>Lead sales operations processes: forecasting, reporting, and pipeline tracking to support strategic decisions.</li>
-          <li>Analyze sales/performance data to identify trends, opportunities, and process improvements.</li>
-          <li>Oversee dual ERP systems (Citrix &amp; Microsoft Dynamics GP): sales entries, asset tracking, revenue booking, compliance.</li>
-          <li>Design and implement process improvements with leadership; provide insights from KPI dashboards.</li>
-          <li>Support pricing reviews, contract renewals, and account optimization with cross-functional teams.</li>
-          <li>Monitor market and competitor activities to assess risks and growth opportunities.</li>
+          <li>Manage multinational key accounts ensuring satisfaction, retention, and strategic growth.</li>
+          <li>Analyze sales &amp; operational data; deliver KPI dashboards and insights in Power BI for leaders.</li>
+          <li>Oversee CRM data integrity and forecasting cadence; improve reporting accuracy and timeliness.</li>
+          <li>Optimize ERP workflows (Dynamics GP, Citrix); automate reports and streamline documentation.</li>
+          <li>Negotiate contracts and renewals; coordinate pricing and service scope with cross-functional teams.</li>
+          <li>Lead process improvements that shorten reporting cycles and reduce manual work.</li>
+          <li>Partner with Finance/Logistics/IT to resolve issues quickly and elevate customer experience.</li>
         </ul>
       </div>
 
@@ -439,7 +419,7 @@
         <ul>
           <li>Analyzed and tracked passenger processing times from arrival to departure; reported on KPIs.</li>
           <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
-          <li>Monitored operations across arrival/departure areas to optimize coordination and the passenger journey.</li>
+          <li>Monitored operations across arrival/departure areas to optimize coordination and passenger journey.</li>
           <li>Generated accurate data reports to support decision-making and operational efficiency.</li>
         </ul>
       </div>
@@ -449,8 +429,8 @@
       <h2 class="ats-title">Education</h2>
       <div><strong>Bachelor's Degree in Information Technology</strong> — Saudi Electronic University (2018 – 2022)</div>
       <ul class="ats-list">
-        <li>Database Management &amp; Systems Design; Business Information Systems &amp; ERP</li>
-        <li>Data Analysis &amp; Business Intelligence; Network Administration &amp; Security</li>
+        <li>Database Management &amp; Systems Design · Business Information Systems &amp; ERP</li>
+        <li>Data Analysis &amp; Business Intelligence · Network Administration &amp; Security</li>
         <li>Project Management &amp; System Implementation</li>
       </ul>
     </section>
@@ -473,9 +453,10 @@
     <section class="ats-section pb-avoid">
       <h2 class="ats-title">Selected Achievements</h2>
       <ul class="ats-list">
-        <li><strong>+64% operational productivity</strong> via sales cycle optimization.</li>
-        <li><strong>+68% client satisfaction</strong> using structured complaint tracking.</li>
-        <li>ERP rollout &amp; training across <strong>KSA &amp; UAE</strong>, improving efficiency and reporting accuracy.</li>
+        <li><strong>+64% operational productivity</strong> via sales cycle optimization and automation.</li>
+        <li><strong>+68% client satisfaction</strong> using structured complaint tracking and follow-ups.</li>
+        <li><strong>23% revenue increase</strong> through strategic negotiation and account expansion across major clients.</li>
+        <li><strong>ERP rollout</strong> and training across KSA &amp; UAE; deployment completed <strong>4 months early</strong>.</li>
         <li>Revived previously uncertain sales, contributing to improved revenue stability.</li>
       </ul>
     </section>
@@ -531,7 +512,7 @@
         showToast('Copied ✅');
       } catch (e) {
         const tmp = document.createElement('textarea');
-        tmp.value = text; document.body.appendChild(tmp); tmp.select();
+        tmp.value = text; document.body.appendChild(tmp; tmp.select());
         try { document.execCommand('copy'); showToast('Copied ✅'); } catch(_) { alert(text); }
         document.body.removeChild(tmp);
       }
@@ -555,7 +536,7 @@
       });
     });
 
-    // Print to PDF (ATS layout is handled by CSS @media print)
+    // Print to PDF (ATS layout handled by CSS @media print)
     const printBtn = document.getElementById('printBtn');
     if (printBtn) {
       printBtn.addEventListener('click', () => {

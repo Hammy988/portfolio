@@ -1,412 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohammed Al Subaie — Portfolio</title>
-  <meta name="description" content="Sales Ops, Key Accounts, and Business/Performance Analysis with 7+ years across CRM/ERP, data analytics, and process optimization." />
-
-  <!-- Google tag (gtag.js) - GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75NDBBQHRD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-75NDBBQHRD', { anonymize_ip: true });
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
-          colors: {
-            brand: {50:'#EFF6FF',100:'#DBEAFE',200:'#BFDBFE',300:'#93C5FD',400:'#60A5FA',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8',800:'#1E40AF',900:'#1E3A8A'},
-            accent:{50:'#ECFDF5',100:'#D1FAE5',200:'#A7F3D0',300:'#6EE7B7',400:'#34D399',500:'#10B981',600:'#059669',700:'#047857',800:'#065F46',900:'#064E3B'}
-          },
-          boxShadow: {
-            glow:'0 10px 30px rgba(59,130,246,0.15)',
-            soft:'0 4px 20px rgba(0,0,0,0.08)',
-            card:'0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
-    header > .mx-auto, main, footer { max-width: 1024px; margin-inline:auto; }
-
-    /* Brand block (screen) */
-    .brand-wrap { display:flex; align-items:center; gap:.75rem; }
-    .brand-logo { width:44px; height:44px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg,#2563EB,#059669); color:#fff; font-weight:800; }
-    .brand-name { font-weight:800; line-height:1.1; }
-    .brand-title { font-size:.9rem; color:#4b5563; }
-
-    /* Icon buttons */
-    .icon-btn {
-      width:40px; height:40px; border-radius:.6rem; display:inline-grid; place-items:center;
-      background:#eef2ff; color:#1e40af; border:1px solid #dbeafe; box-shadow:0 1px 1px rgba(0,0,0,.03);
-      transition:transform .08s ease, background .15s ease;
-    }
-    .icon-btn:hover { background:#e0e7ff; }
-    .icon-btn:active { transform:scale(0.97); }
-    .icon { width:18px; height:18px; }
-    .brand-linkedin {
-      width:40px; height:40px; border-radius:.6rem; display:inline-grid; place-items:center;
-      background:#0A66C2; color:#fff; transition:filter .15s ease;
-    }
-    .brand-linkedin:hover { filter:brightness(.95); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohammed Al Subaie - Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-  <!-- ========== SCREEN PORTFOLIO ========== -->
-  <div>
-    <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
-    <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
-         style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
+<header class="flex justify-between items-center p-4 bg-white shadow">
+  <h1 class="text-2xl font-bold">Mohammed Al Subaie</h1>
+  <div class="flex items-center gap-2">
+    <!-- Resume button -->
+    <a href="https://app.enhancv.com/share/ccd6d03e/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic" 
+       target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 font-semibold shadow transition"
+       aria-label="View Resume">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-width="1.8"/>
+        <path d="M14 2v6h6" stroke-width="1.8"/>
+        <path d="M12 12v6" stroke-width="1.8"/>
+        <path d="M9 15l3 3 3-3" stroke-width="1.8"/>
+      </svg>
+      <span>Resume</span>
+    </a>
 
-    <header id="topnav" class="sticky top-0 z-50 bg-blue-50/90 backdrop-blur-md border-b border-blue-200">
-      <div class="mx-auto px-5">
-        <div class="flex items-center justify-between py-3">
-          <a href="#" class="brand-wrap group">
-            <span class="brand-logo shadow-glow text-base">MS</span>
-            <div>
-              <div class="brand-name group-hover:text-brand-600 transition-colors text-[1.05rem]">Mohammed Al Subaie</div>
-              <div class="brand-title">Sales Ops Analyst · Key Account Manager · Performance/Business Analyst</div>
-            </div>
-          </a>
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener"
+       aria-label="LinkedIn" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 448 512" fill="currentColor">
+        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.45 0 53.8 0 24.1 24.09-.5 53.79-.5c29.66 0 53.75 24.6 53.75 54.3 0 29.65-24.09 53.8-53.75 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.26-79.2-48.26 0-55.66 37.7-55.66 76.6V448h-92.4V148.9h88.7v40.8h1.3c12.36-23.4 42.54-48.26 87.5-48.26 93.5 0 110.7 61.5 110.7 141.3V448z"/>
+      </svg>
+    </a>
 
-          <nav class="hidden md:flex items-center gap-1 text-sm">
-            <a href="#about" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">About</a>
-            <a href="#skills" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Skills</a>
-            <a href="#experience" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Experience</a>
-            <a href="#education" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Education</a>
-            <a href="#certifications" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Certifications</a>
-            <a href="#projects" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Projects</a>
-            <a href="#contact" class="px-3 py-1.5 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition font-medium">Contact</a>
-          </nav>
-
-          <div class="flex items-center gap-2">
-            <!-- Resume button (online link) -->
-            <a href="https://app.enhancv.com/share/ccd6d03e/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic"
-               target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-3 py-2 font-semibold shadow-glow transition"
-               aria-label="View Resume" id="resumeDownloadBtn" title="Open Resume">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-width="1.8"/>
-                <path d="M14 2v6h6" stroke-width="1.8"/>
-                <path d="M12 12v6" stroke-width="1.8"/>
-                <path d="M9 15l3 3 3-3" stroke-width="1.8"/>
-              </svg>
-              <span>Resume</span>
-            </a>
-
-            <!-- LinkedIn icon -->
-            <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener"
-               class="brand-linkedin" aria-label="LinkedIn" title="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
-                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.45 0 53.8 0 24.1 24.09-.5 53.79-.5c29.66 0 53.75 24.6 53.75 54.3 0 29.65-24.09 53.8-53.75 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.26-79.2-48.26 0-55.66 37.7-55.66 76.6V448h-92.4V148.9h88.7v40.8h1.3c12.36-23.4 42.54-48.26 87.5-48.26 93.5 0 110.7 61.5 110.7 141.3V448z"/>
-              </svg>
-            </a>
-
-            <!-- Copy link -->
-            <button id="copyLink" class="icon-btn" aria-label="Copy site link" title="Copy site link">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path d="M10 14a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5" stroke-width="1.8"/>
-                <path d="M14 10a5 5 0 0 0-7.07 0L4.1 12.83a5 5 0 1 0 7.07 7.07L13 19" stroke-width="1.8"/>
-              </svg>
-            </button>
-
-            <!-- Mobile menu -->
-            <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 hover:bg-gray-200" aria-label="Open menu">☰</button>
-          </div>
-        </div>
-
-        <div id="mobileMenu" class="md:hidden hidden pb-3">
-          <div class="grid gap-1">
-            <a href="#about" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">About</a>
-            <a href="#skills" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Skills</a>
-            <a href="#experience" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Experience</a>
-            <a href="#education" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Education</a>
-            <a href="#certifications" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Certifications</a>
-            <a href="#projects" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Projects</a>
-            <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-brand-600 hover:bg-brand-50 font-medium">Contact</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main (screen) -->
-    <main class="mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- About -->
-      <section id="about" class="pt-10">
-        <div class="max-w-5xl">
-          <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">
-            📍 Al Khobar, Saudi Arabia · ✉️ mo.subaie@gmail.com
-          </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
-            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Mohammed Al Subaie</span>
-          </h1>
-          <p class="mt-4 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl">
-            Versatile professional with 7+ years spanning sales operations, key account management, and performance/business analysis.
-            I leverage Power BI, advanced Excel, KPI frameworks, and CRM/ERP (Microsoft Dynamics GP, Citrix) to drive decisions,
-            streamline processes, and support revenue growth. I build long-term client partnerships, negotiate win–win contracts,
-            and deliver executive-ready reporting and automation that improve efficiency and visibility across teams.
-          </p>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills" class="mt-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Core Skills</h2>
-        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
-            <div class="font-bold text-lg mb-2">Sales Operations</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Order management & processing</li><li>Asset tracking & inventory control</li><li>Revenue booking, S&OP support & forecasting</li></ul>
-          </div>
-          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
-            <div class="font-bold text-lg mb-2">Key Account Management</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Multinational relationships & retention</li><li>Upsell/cross-sell strategies</li><li>Escalation handling & SLAs</li></ul>
-          </div>
-          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
-            <div class="font-bold text-lg mb-2">CRM & ERP Administration</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Microsoft Dynamics GP</li><li>Citrix administration</li><li>Data integrity, testing & training</li></ul>
-          </div>
-          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
-            <div class="font-bold text-lg mb-2">Business & Data Analysis</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Performance dashboards</li><li>BI & forecasting; SQL basics</li><li>KPI frameworks & recommendations</li></ul>
-          </div>
-          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
-            <div class="font-bold text-lg mb-2">Process Optimization</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Workflow streamlining</li><li>Cross-functional collaboration</li><li>SOPs & governance</li></ul>
-          </div>
-          <div class="bg-blue-50/80 rounded-2xl p-5 shadow-card border border-blue-200">
-            <div class="font-bold text-lg mb-2">Tools</div>
-            <ul class="text-gray-700 space-y-1.5"><li>Excel (advanced)</li><li>Power BI</li><li>Dynamics GP · Citrix</li></ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience" class="mt-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Experience</h2>
-
-        <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200 mb-5">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-            <div>
-              <h3 class="text-xl font-bold">Senior Key Accounts Management & Sales Operations Analyst</h3>
-              <p class="text-brand-700 font-semibold">Petroleum & Energy Logistics and Services Co.</p>
-              <p class="text-gray-600">Jul 2018 — Present · Dhahran, Saudi Arabia</p>
-            </div>
-            <span class="rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs font-semibold">Accounts · Sales Ops · ERP</span>
-          </div>
-          <ul class="list-disc pl-6 space-y-2 text-gray-800">
-            <li>Manage multinational key accounts ensuring satisfaction, retention, and strategic growth.</li>
-            <li>Analyze sales & operational data; deliver KPI dashboards and insights in Power BI for leaders.</li>
-            <li>Oversee CRM data integrity and forecasting cadence; improve reporting accuracy and timeliness.</li>
-            <li>Optimize ERP workflows (Dynamics GP, Citrix); automate reports and streamline documentation.</li>
-            <li>Negotiate contracts and renewals; coordinate pricing and service scope with cross-functional teams.</li>
-            <li>Lead process improvements that shorten reporting cycles and reduce manual work.</li>
-            <li>Partner with Finance/Logistics/IT to resolve issues quickly and elevate customer experience.</li>
-          </ul>
-        </article>
-
-        <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-            <div>
-              <h3 class="text-xl font-bold">Senior Customer Service & Operations Support Specialist</h3>
-              <p class="text-brand-700 font-semibold">Emdad Alkhebrat – ELM Company</p>
-              <p class="text-gray-600">Aug 2017 — Jul 2018 · Dammam, Saudi Arabia</p>
-            </div>
-            <span class="rounded-full bg-accent-100 text-accent-800 px-3 py-1.5 text-xs font-semibold">Service Ops · Client Care</span>
-          </div>
-          <ul class="list-disc pl-6 space-y-2 text-gray-800">
-            <li>Analyzed and tracked passenger processing times from arrival to departure; reported on KPIs.</li>
-            <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
-            <li>Monitored operations across arrival/departure areas to optimize coordination and passenger journey.</li>
-            <li>Generated accurate data reports to support decision-making and operational efficiency.</li>
-          </ul>
-        </article>
-      </section>
-
-      <!-- Education -->
-      <section id="education" class="mt-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Education</h2>
-        <div class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
-          <h3 class="text-lg font-bold">Bachelor's Degree in Information Technology</h3>
-          <p class="text-brand-700 font-semibold">Saudi Electronic University · 2018 — 2022</p>
-          <ul class="list-disc pl-6 text-gray-800 space-y-1.5 mt-2">
-            <li>Database Management & Systems Design · Business Information Systems & ERP</li>
-            <li>Data Analysis & Business Intelligence · Network Administration & Security</li>
-            <li>Project Management & System Implementation</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section id="certifications" class="mt-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Certifications & Awards</h2>
-        <div class="grid gap-5 md:grid-cols-2">
-          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
-            <div class="font-semibold text-lg text-gray-900">Microsoft Power BI Data Analyst Professional</div>
-            <div class="text-sm text-gray-600 mt-1">Umm Al Qura University — Jan 2025</div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
-            <div class="font-semibold text-lg text-gray-900">CompTIA Security+</div>
-            <div class="text-sm text-gray-600 mt-1">Ministry of Communications & IT / Al Khaleej Training — May 2023</div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
-            <div class="font-semibold text-lg text-gray-900">IT Specialist</div>
-            <div class="text-sm text-gray-600 mt-1">Saudi Council of Engineers</div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-card border border-gray-200 p-5">
-            <div class="font-semibold text-lg text-gray-900">“Best Great Strategy Game of Business 2021”</div>
-            <div class="text-sm text-gray-600 mt-1">Tiger Offshore Company (Financial process innovation)</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="mt-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Projects</h2>
-        <article class="bg-blue-50/70 rounded-2xl p-6 shadow-card border border-blue-200">
-          <div class="flex items-start justify-between gap-4 mb-3">
-            <div>
-              <h3 class="text-lg font-bold">CabShare — Android App (Team Leader)</h3>
-              <p class="text-gray-700">Ride-sharing · Database Management · Communication System</p>
-            </div>
-            <span class="rounded-full bg-purple-100 text-purple-800 px-3 py-1 text-xs font-semibold">Leadership</span>
-          </div>
-          <p class="text-gray-800">Led an Android app enabling commuters to share rides. Built real-time trip matching, departure station tracking, and communication between drivers and riders.</p>
-        </article>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="mt-10 mb-14">
-        <div class="bg-gradient-to-r from-brand-600 to-accent-600 rounded-2xl p-1">
-          <div class="bg-blue-50/80 rounded-2xl p-6 sm:p-8">
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Let's connect</h2>
-            <div class="flex flex-wrap gap-3">
-              <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 font-semibold shadow-glow transition">✉️ Email Me</a>
-              <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="brand-linkedin" aria-label="LinkedIn" title="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
-                  <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.45 0 53.8 0 24.1 24.09-.5 53.79-.5c29.66 0 53.75 24.6 53.75 54.3 0 29.65-24.09 53.8-53.75 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.26-79.2-48.26 0-55.66 37.7-55.66 76.6V448h-92.4V148.9h88.7v40.8h1.3c12.36-23.4 42.54-48.26 87.5-48.26 93.5 0 110.7 61.5 110.7 141.3V448z"/>
-                </svg>
-              </a>
-              <!-- Only ONE copy icon: copies your EMAIL -->
-              <button id="copyEmail" class="icon-btn" aria-label="Copy my email" title="Copy my email">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <rect x="3" y="5" width="18" height="14" rx="2" ry="2" stroke-width="1.8"></rect>
-                  <path d="M3 7l9 6 9-6" stroke-width="1.8"></path>
-                </svg>
-              </button>
-              <!-- (Removed the second/duplicate copy icon) -->
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="mx-auto px-4 sm:px-6 lg:px-8 pb-10 text-gray-600">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p>© <span id="year"></span> Mohammed Al Subaie. All rights reserved.</p>
-        <div class="text-sm">Professional · Clean · Easy to share</div>
-      </div>
-    </footer>
+    <!-- Copy email -->
+    <button id="copyEmail" class="p-2 rounded-lg bg-gray-200 hover:bg-gray-300" aria-label="Copy Email" title="Copy Email">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 4h16v16H4z" stroke-width="1.8"/>
+        <path d="M4 4l8 8 8-8" stroke-width="1.8"/>
+      </svg>
+    </button>
   </div>
+</header>
 
-  <!-- Toast -->
-  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
-    <div class="rounded-xl bg-gray-900 text-white px-4 py-3 shadow-glow text-center">Done ✅</div>
-  </div>
+<main class="p-6">
+  <!-- Your main content here -->
+  <h2>About Me</h2>
+  <p>Experienced in Sales Operations, Key Account Management, Business Analysis, and Performance Analytics with strong skills in Power BI, ERP Systems, and client relationship management.</p>
+</main>
 
-  <script>
-    // Toast
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      if (!toast) return;
-      toast.firstElementChild.textContent = message;
-      toast.classList.remove('hidden');
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => toast.classList.add('hidden'), 1400);
-    }
+<footer class="p-4 bg-gray-100 text-center text-sm">
+  <p>&copy; 2025 Mohammed Al Subaie. All rights reserved.</p>
+</footer>
 
-    // Year
-    document.addEventListener('DOMContentLoaded', () => {
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-    });
+<script>
+document.getElementById("copyEmail").addEventListener("click", function () {
+  navigator.clipboard.writeText("mo.subaie@gmail.com").then(() => {
+    alert("Email copied!");
+  });
+});
+</script>
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        const id = link.getAttribute('href');
-        if (id && id.length > 1) {
-          e.preventDefault();
-          const el = document.querySelector(id);
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          const mobileMenu = document.getElementById('mobileMenu');
-          if (mobileMenu) mobileMenu.classList.add('hidden');
-        }
-      });
-    });
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    }
-
-    // Clipboard (robust with fallback)
-    async function copyToClipboard(text) {
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast('Copied ✅');
-      } catch (e) {
-        const tmp = document.createElement('textarea');
-        tmp.value = text;
-        tmp.setAttribute('readonly', '');
-        tmp.style.position = 'absolute';
-        tmp.style.left = '-9999px';
-        document.body.appendChild(tmp);
-        tmp.select();
-        try {
-          document.execCommand('copy');
-          showToast('Copied ✅');
-        } catch (_) {
-          alert(text);
-        }
-        document.body.removeChild(tmp);
-      }
-    }
-
-    // Copy site link (top-right)
-    const copyLinkBtn = document.getElementById('copyLink');
-    if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => copyToClipboard(window.location.href));
-
-    // Copy email (bottom — only one copy icon now)
-    const copyEmailBtn = document.getElementById('copyEmail');
-    if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard('mo.subaie@gmail.com'));
-
-    // Analytics (optional)
-    const resumeBtn = document.getElementById('resumeDownloadBtn');
-    if (resumeBtn) {
-      resumeBtn.addEventListener('click', () => {
-        if (typeof gtag === 'function') gtag('event', 'resume_click', { area: 'header' });
-      });
-    }
-    document.querySelectorAll('a[aria-label="LinkedIn"]').forEach(a => {
-      a.addEventListener('click', () => {
-        if (typeof gtag === 'function') gtag('event', 'linkedin_click', { area: 'icon' });
-      });
-    });
-  </script>
 </body>
 </html>

@@ -62,54 +62,13 @@
     }
     .brand-linkedin:hover { filter:brightness(.95); }
 
-    /* PRINT: ATS resume (single column) */
-    @media print {
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      html, body { background: #ffffff !important; }
-      .screen-only { display: none !important; }
-      .print-only { display: block !important; }
-
-      :root { --brand:#1E3A8A; --brand-soft:#DBEAFE; --accent:#065F46; }
-
-      body { font-size: 12.5px; line-height: 1.35; color:#111827; }
-      #ats { max-width: 210mm; margin: 0 auto; }
-
-      .ats-header { border-bottom: 2px solid var(--brand); padding-bottom: 8px; margin-bottom: 10px; }
-      .ats-name { font-size: 24px; font-weight: 800; color: var(--brand); margin:0; }
-      .ats-meta { margin-top: 4px; color:#1f2937; display:flex; flex-wrap:wrap; gap:8px; }
-      .meta-chip { background: var(--brand-soft); color: var(--brand); padding: 3px 8px; border-radius: 999px; font-weight: 600; border: 1px solid #bfdbfe; }
-
-      .ats-section { margin-top: 12px; }
-      .ats-title { font-size: 15px; font-weight: 800; color: var(--brand); border-bottom: 1px solid #c7d2fe; padding-bottom: 4px; margin: 0 0 6px; }
-      .ats-role { margin-top: 6px; break-inside: avoid; }
-      .ats-role h3 { font-size: 13.5px; font-weight: 800; color:#111827; margin:0; }
-      .ats-role .company { font-size: 12.5px; color:#1f2937; margin-top:2px; }
-      .ats-role .location { color:#374151; }
-      .ats-role ul { margin: 6px 0 0 18px; }
-      .ats-role li { margin: 3px 0; }
-
-      .ats-badges { display:flex; gap:6px; flex-wrap:wrap; margin-top: 6px; }
-      .badge { border:1px solid #cbd5e1; background:#f8fafc; color:#0f172a; padding:2px 8px; border-radius:999px; font-weight:700; font-size:12px; }
-      .badge-positive { border-color:#86efac; background:#ecfdf5; color:#065f46; }
-      .badge-info { border-color:#93c5fd; background:#eff6ff; color:#1e3a8a; }
-
-      .ats-list { margin: 6px 0 0 18px; }
-      .ats-list li { margin: 3px 0; }
-
-      .ats-soft { color:#1f2937; }
-      .ats-kicker { font-weight:700; color:var(--brand); }
-
-      .pb-avoid { break-inside: avoid; page-break-inside: avoid; }
-      .pb-always { page-break-before: always; }
-      @page { margin: 10mm; }
-    }
-    .print-only { display:none; } /* hide ATS on screen */
+    /* No print-specific ATS layout — removed for simplicity */
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <!-- ========== SCREEN PORTFOLIO ========== -->
-  <div class="screen-only">
+  <div>
     <div class="fixed inset-0 -z-10 bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-100"></div>
     <div class="pointer-events-none fixed inset-0 -z-10 opacity-30"
          style="background-image: radial-gradient(900px 350px at 12% 10%, rgba(59,130,246,.12), transparent 60%), radial-gradient(800px 420px at 88% 18%, rgba(99,102,241,.10), transparent 65%);"></div>
@@ -138,7 +97,7 @@
           <div class="flex items-center gap-2">
             <!-- LinkedIn icon-only -->
             <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener"
-               class="brand-linkedin no-print-url" aria-label="LinkedIn" title="LinkedIn">
+               class="brand-linkedin" aria-label="LinkedIn" title="LinkedIn">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
                 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.45 0 53.8 0 24.1 24.09-.5 53.79-.5c29.66 0 53.75 24.6 53.75 54.3 0 29.65-24.09 53.8-53.75 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.26-79.2-48.26 0-55.66 37.7-55.66 76.6V448h-92.4V148.9h88.7v40.8h1.3c12.36-23.4 42.54-48.26 87.5-48.26 93.5 0 110.7 61.5 110.7 141.3V448z"/>
               </svg>
@@ -149,16 +108,6 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path d="M10 14a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5" stroke-width="1.8"/>
                 <path d="M14 10a5 5 0 0 0-7.07 0L4.1 12.83a5 5 0 1 0 7.07 7.07L13 19" stroke-width="1.8"/>
-              </svg>
-            </button>
-
-            <!-- Print to PDF -->
-            <button id="printBtn" class="icon-btn" aria-label="Print to PDF" title="Print to PDF">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                <path d="M6 9V2h12v7" stroke-width="1.8"/>
-                <rect x="6" y="13" width="12" height="8" rx="1.5" stroke-width="1.8"/>
-                <path d="M6 17h12" stroke-width="1.8"/>
-                <path d="M6 13H5a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1" stroke-width="1.8"/>
               </svg>
             </button>
 
@@ -187,7 +136,7 @@
         <div class="max-w-5xl">
           <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-800 px-3 py-1.5 text-xs sm:text-sm font-medium mb-6">
             📍 Al Khobar, Saudi Arabia · ✉️ mo.subaie@gmail.com
-            <button onclick="window.print()" class="ml-2 underline font-semibold">Print ATS Résumé</button>
+            <button id="printBtn" class="ml-2 underline font-semibold">Print / Save as PDF</button>
           </div>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
             Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Mohammed Al Subaie</span>
@@ -333,7 +282,7 @@
             <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Let's connect</h2>
             <div class="flex flex-wrap gap-3">
               <a href="mailto:mo.subaie@gmail.com" class="inline-flex items-center rounded-xl bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 font-semibold shadow-glow transition">✉️ Email Me</a>
-              <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="brand-linkedin no-print-url" aria-label="LinkedIn" title="LinkedIn">
+              <a href="https://linkedin.com/in/mohammed-al-subaie-28159089" target="_blank" rel="noopener" class="brand-linkedin" aria-label="LinkedIn" title="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
                   <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.45 0 53.8 0 24.1 24.09-.5 53.79-.5c29.66 0 53.75 24.6 53.75 54.3 0 29.65-24.09 53.8-53.75 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.2-48.26-79.2-48.26 0-55.66 37.7-55.66 76.6V448h-92.4V148.9h88.7v40.8h1.3c12.36-23.4 42.54-48.26 87.5-48.26 93.5 0 110.7 61.5 110.7 141.3V448z"/>
                 </svg>
@@ -342,6 +291,12 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <rect x="9" y="2" width="6" height="4" rx="1" stroke-width="1.8"></rect>
                   <rect x="4" y="6" width="16" height="16" rx="2" stroke-width="1.8"></rect>
+                </svg>
+              </button>
+              <button id="copyLinkFooter" class="icon-btn" aria-label="Copy site link" title="Copy link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path d="M10 14a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5" stroke-width="1.8"/>
+                  <path d="M14 10a5 5 0 0 0-7.07 0L4.1 12.83a5 5 0 1 0 7.07 7.07L13 19" stroke-width="1.8"/>
                 </svg>
               </button>
             </div>
@@ -358,112 +313,8 @@
     </footer>
   </div>
 
-  <!-- ========== PRINT-ONLY ATS RESUME (single column) ========== -->
-  <div id="ats" class="print-only">
-    <section class="ats-header pb-avoid">
-      <h1 class="ats-name">Mohammed Al Subaie</h1>
-      <div class="ats-meta">
-        <span class="meta-chip">Al Khobar, Saudi Arabia</span>
-        <span class="meta-chip">Email: mo.subaie@gmail.com</span>
-        <span class="meta-chip">LinkedIn: linkedin.com/in/mohammed-al-subaie-28159089</span>
-      </div>
-      <div class="ats-badges">
-        <span class="badge badge-positive">+64% Productivity</span>
-        <span class="badge badge-positive">+68% CSAT</span>
-        <span class="badge badge-info">ERP Rollout: KSA & UAE</span>
-      </div>
-    </section>
-
-    <section class="ats-section pb-avoid">
-      <h2 class="ats-title">Professional Summary</h2>
-      <p class="ats-soft">
-        Versatile Sales Operations Analyst, Key Account Manager, and Performance/Business Analyst with 7+ years of experience across data analytics,
-        client relationship management, and enterprise systems. Proficient in Power BI, advanced Excel, KPI frameworks, CRM/ERP (Microsoft Dynamics GP, Citrix),
-        and reporting automation. Drive revenue growth, operational efficiency, and on-time ERP implementations while aligning business strategy with technology.
-        Known for executive-ready dashboards, process improvements, and cross-functional collaboration.
-      </p>
-    </section>
-
-    <section class="ats-section pb-avoid">
-      <h2 class="ats-title">Core Skills</h2>
-      <ul class="ats-list">
-        <li>Data Analysis &amp; Visualization; KPI Frameworks; Performance Reporting (Power BI, Excel)</li>
-        <li>Sales Operations; Forecasting; Pipeline &amp; Revenue Reporting; CRM Data Integrity</li>
-        <li>Key Account Management; Retention; Contract Negotiation; Client Escalation Handling</li>
-        <li>ERP (Microsoft Dynamics GP, Citrix); Process Automation; Testing &amp; Training</li>
-        <li>Business Process Improvement; SOPs; Cross-functional Collaboration (Sales, Finance, Logistics, IT)</li>
-        <li>System Integration Support; Stakeholder Communication; Executive Dashboards</li>
-      </ul>
-    </section>
-
-    <section class="ats-section">
-      <h2 class="ats-title">Experience</h2>
-
-      <div class="ats-role pb-avoid">
-        <h3>Senior Key Accounts Management &amp; Sales Operations Analyst</h3>
-        <div class="company">Petroleum &amp; Energy Logistics and Services Co. — <span class="location">Jul 2018 – Present · Dhahran, Saudi Arabia</span></div>
-        <ul>
-          <li>Manage multinational key accounts ensuring satisfaction, retention, and strategic growth.</li>
-          <li>Analyze sales &amp; operational data; deliver KPI dashboards and insights in Power BI for leaders.</li>
-          <li>Oversee CRM data integrity and forecasting cadence; improve reporting accuracy and timeliness.</li>
-          <li>Optimize ERP workflows (Dynamics GP, Citrix); automate reports and streamline documentation.</li>
-          <li>Negotiate contracts and renewals; coordinate pricing and service scope with cross-functional teams.</li>
-          <li>Lead process improvements that shorten reporting cycles and reduce manual work.</li>
-          <li>Partner with Finance/Logistics/IT to resolve issues quickly and elevate customer experience.</li>
-        </ul>
-      </div>
-
-      <div class="ats-role pb-avoid">
-        <h3>Senior Customer Service &amp; Operations Support Specialist</h3>
-        <div class="company">Emdad Alkhebrat – ELM Company — <span class="location">Aug 2017 – Jul 2018 · Dammam, Saudi Arabia</span></div>
-        <ul>
-          <li>Analyzed and tracked passenger processing times from arrival to departure; reported on KPIs.</li>
-          <li>Prepared detailed reports to support performance evaluation and process improvements.</li>
-          <li>Monitored operations across arrival/departure areas to optimize coordination and passenger journey.</li>
-          <li>Generated accurate data reports to support decision-making and operational efficiency.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="ats-section pb-avoid">
-      <h2 class="ats-title">Education</h2>
-      <div><strong>Bachelor's Degree in Information Technology</strong> — Saudi Electronic University (2018 – 2022)</div>
-      <ul class="ats-list">
-        <li>Database Management &amp; Systems Design · Business Information Systems &amp; ERP</li>
-        <li>Data Analysis &amp; Business Intelligence · Network Administration &amp; Security</li>
-        <li>Project Management &amp; System Implementation</li>
-      </ul>
-    </section>
-
-    <section class="ats-section pb-avoid">
-      <h2 class="ats-title">Certifications &amp; Awards</h2>
-      <ul class="ats-list">
-        <li>Microsoft Power BI Data Analyst Professional — Umm Al Qura University (Jan 2025)</li>
-        <li>CompTIA Security+ — Ministry of Communications &amp; IT / Al Khaleej Training (May 2023)</li>
-        <li>IT Specialist — Saudi Council of Engineers</li>
-        <li>“Best Great Strategy Game of Business 2021” — Tiger Offshore Company (Financial process innovation)</li>
-      </ul>
-    </section>
-
-    <section class="ats-section pb-avoid">
-      <h2 class="ats-title">Projects</h2>
-      <div><span class="ats-kicker">CabShare — Android App (Team Leader):</span> Real-time trip matching, departure station tracking, and driver–rider communication for sustainable commuting.</div>
-    </section>
-
-    <section class="ats-section pb-avoid">
-      <h2 class="ats-title">Selected Achievements</h2>
-      <ul class="ats-list">
-        <li><strong>+64% operational productivity</strong> via sales cycle optimization and automation.</li>
-        <li><strong>+68% client satisfaction</strong> using structured complaint tracking and follow-ups.</li>
-        <li><strong>23% revenue increase</strong> through strategic negotiation and account expansion across major clients.</li>
-        <li><strong>ERP rollout</strong> and training across KSA &amp; UAE; deployment completed <strong>4 months early</strong>.</li>
-        <li>Revived previously uncertain sales, contributing to improved revenue stability.</li>
-      </ul>
-    </section>
-  </div>
-
   <!-- Toast -->
-  <div id="toast" class="screen-only fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
+  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm hidden">
     <div class="rounded-xl bg-gray-900 text-white px-4 py-3 shadow-glow text-center">Done ✅</div>
   </div>
 
@@ -485,7 +336,7 @@
     });
 
     // Smooth scroll
-    document.querySelectorAll('.screen-only a[href^="#"]').forEach(link => {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         const id = link.getAttribute('href');
         if (id && id.length > 1) {
@@ -505,46 +356,55 @@
       menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     }
 
-    // Clipboard
+    // Robust clipboard (with fallback)
     async function copyToClipboard(text) {
       try {
         await navigator.clipboard.writeText(text);
         showToast('Copied ✅');
       } catch (e) {
+        // Fallback for older browsers / iOS
         const tmp = document.createElement('textarea');
-        tmp.value = text; document.body.appendChild(tmp; tmp.select());
-        try { document.execCommand('copy'); showToast('Copied ✅'); } catch(_) { alert(text); }
+        tmp.value = text;
+        tmp.setAttribute('readonly', '');
+        tmp.style.position = 'absolute';
+        tmp.style.left = '-9999px';
+        document.body.appendChild(tmp);
+        tmp.select();
+        try {
+          document.execCommand('copy');
+          showToast('Copied ✅');
+        } catch (_) {
+          alert(text); // final fallback
+        }
         document.body.removeChild(tmp);
       }
     }
+
     const copyLinkBtn = document.getElementById('copyLink');
-    if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => {
-      copyToClipboard(window.location.href);
-      if (typeof gtag === 'function') gtag('event', 'copy_link_clicked', { location: 'header' });
-    });
+    if (copyLinkBtn) copyLinkBtn.addEventListener('click', () => copyToClipboard(window.location.href));
+
+    const copyLinkFooterBtn = document.getElementById('copyLinkFooter');
+    if (copyLinkFooterBtn) copyLinkFooterBtn.addEventListener('click', () => copyToClipboard(window.location.href));
 
     const copyEmailBtn = document.getElementById('copyEmail');
-    if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => {
-      copyToClipboard('mo.subaie@gmail.com');
-      if (typeof gtag === 'function') gtag('event', 'email_copied', { area: 'contact' });
-    });
+    if (copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard('mo.subaie@gmail.com'));
 
-    // LinkedIn icon clicks (header + contact)
+    // Print current page (no ATS-specific layout now)
+    const printBtn = document.getElementById('printBtn');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        showToast('Opening print…');
+        if (typeof gtag === 'function') gtag('event', 'print_clicked', { layout: 'screen_print' });
+        window.print();
+      });
+    }
+
+    // Analytics: LinkedIn icon clicks (header + contact)
     document.querySelectorAll('a[aria-label="LinkedIn"]').forEach(a => {
       a.addEventListener('click', () => {
         if (typeof gtag === 'function') gtag('event', 'linkedin_click', { area: 'icon' });
       });
     });
-
-    // Print to PDF (ATS layout handled by CSS @media print)
-    const printBtn = document.getElementById('printBtn');
-    if (printBtn) {
-      printBtn.addEventListener('click', () => {
-        showToast('Opening print…');
-        if (typeof gtag === 'function') gtag('event', 'print_clicked', { layout: 'ATS_print' });
-        window.print();
-      });
-    }
   </script>
 </body>
 </html>
